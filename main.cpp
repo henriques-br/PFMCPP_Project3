@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) horn button
+            4) volume controls
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) steer the car
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) speedometer
+            2) tachometer
+            3) fuel gauge
+            4) temperature gauge
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) display vehicle speed
+            2) display RPM
+            3) show warning messages
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) temperature knobs
+            2) fan speed buttons
+            3) air conditioning controls
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) increase cabin temperature
+            2) decrease cabin temperature
+            3) adjust fan speed
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) display screen
+            2) radio controls
+            3) navigation buttons
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) play music
+            2) display navigation routes
+            3) connect to a phone
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) headrest
+            2) seat crushion
+            3) seat adjustment controls
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) recline backward
+            2) move foward and backward
 */
 
 /*
