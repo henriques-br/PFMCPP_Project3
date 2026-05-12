@@ -198,11 +198,11 @@ Part 1b - Step 2: Assignment
 
 Thing 1) Coffee Shop
 5 properties:
-    1) number of coffee machines
-    2) number of employees
-    3) amount of coffee beans in storage
-    4) daily profit amount
-    5) shop name
+    1) number of coffee machines (int)
+    2) number of employees (int)
+    3) amount of coffee beans in storage (float)
+    4) daily profit amount (double)
+    5) shop name (std::string)
 3 things it can do:
     1) brew coffee
     2) serve customers
@@ -210,11 +210,11 @@ Thing 1) Coffee Shop
 
 Thing 2) Video Gane Console
 5 properties:
-    1) storage capacity in gigabytes
-    2) number of installed games
-    3) controller battery level
-    4) console model name
-    5) screen resolution setting
+    1) storage capacity in gigabytes (int)
+    2) number of installed games (int)
+    3) controller battery level (float)
+    4) console model name (std::string)
+    5) screen resolution setting (std::string)
 3 things it can do:
     1) launch games
     2) save game progress
@@ -222,11 +222,11 @@ Thing 2) Video Gane Console
 
 Thing 3) Fitness Tracker
 5 properties:
-    1) battery percentage
-    2) number of steps recorded
-    3) heart rate value
-    4) device color
-    5) daily calorie count
+    1) battery percentage (float)
+    2) number of steps recorded (int)
+    3) heart rate value (int)
+    4) device color (std::string)
+    5) daily calorie count (double)
 3 things it can do:
     1) track workouts
     2) display notifications
@@ -234,11 +234,11 @@ Thing 3) Fitness Tracker
 
 Thing 4) Music Studio
 5 properties:
-    1) number of studio monitors
-    2) number of microphones
-    3) room size in square feet
-    4) recording software name
-    5) hourly rental price
+    1) number of studio monitors (int)
+    2) number of microphones )int)
+    3) room size in square feet (double)
+    4) recording software name (std::string)
+    5) hourly rental price (float)
 3 things it can do:
     1) record vocals
     2) mix audio tracks
