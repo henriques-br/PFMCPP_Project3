@@ -337,17 +337,17 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10)
+Thing 10) Recording Studio Computer Setup
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) computer
+    2) audio interface
+    3) studio monitors
+    4) MIDI keyboard
+    5) microphone
 3 things it can do:
-    1)
-    2)
-    3)
+    1) record music
+    2) edit audio track
+    3) play virtual instruments
  */
 
  /*
