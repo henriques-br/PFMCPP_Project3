@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Coffee Shop
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of coffee machines
+    2) number of employees
+    3) amount of coffee beans in storage
+    4) daily profit amount
+    5) shop name
 3 things it can do:
-    1)
-    2)
-    3)
+    1) brew coffee
+    2) serve customers
+    3) clean tables
 
-Thing 2)
+Thing 2) Video Gane Console
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) storage capacity in gigabytes
+    2) number of installed games
+    3) controller battery level
+    4) console model name
+    5) screen resolution setting
 3 things it can do:
-    1)
-    2)
-    3)
+    1) launch games
+    2) save game progress
+    3) connect to the internet
 
-Thing 3)
+Thing 3) Fitness Tracker
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) battery percentage
+    2) number of steps recorded
+    3) heart rate value
+    4) device color
+    5) daily calorie count
 3 things it can do:
-    1)
-    2)
-    3)
+    1) track workouts
+    2) display notifications
+    3) monitor sleep
 
-Thing 4)
+Thing 4) Music Studio
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of studio monitors
+    2) number of microphones
+    3) room size in square feet
+    4) recording software name
+    5) hourly rental price
 3 things it can do:
-    1)
-    2)
-    3)
+    1) record vocals
+    2) mix audio tracks
+    3) export music files
 */
 
 /*
