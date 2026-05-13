@@ -452,7 +452,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) serve customers
     3) clean tables
 
-2) Video Gane Console
+2) Video Game Console
 5 properties:
     1) storage capacity in gigabytes (int)
     2) number of installed games (int)
@@ -488,7 +488,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) mix audio tracks
     3) export music files
 
-6) Computer
+5) Computer
 5 properties:
     1) CPU speed in GHz (double)
     2) amount of RAM in Gb (int)
@@ -500,7 +500,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) save project files
     3) process audio plugins
 
-7) Audio Interface
+6) Audio Interface
 5 properties:
     1) number of input channels (int)
     2) number of output channels (int)
@@ -512,7 +512,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) send audio to studio monitors
     3) connect microphones and instruments
 
-8) Studio Monitors
+7) Studio Monitors
 5 properties:
     1) speaker size in inches (double)
     2) power outputs in watts (int)
@@ -524,7 +524,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) reproduce low frequencies
     3) monitor a recording session
 
-9) MIDI keyboard
+8) MIDI keyboard
 5 properties:
     1) number of keys (int)
     2) octave range (int)
@@ -536,7 +536,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) control virtual instruments
     3) adjust plugin parameters
 
-10) Microphone
+9) Microphone
 5 properties:
     1) microphone type (std::string)
     2) frequency response range in Hz (float)
@@ -548,7 +548,17 @@ MOVE THEM to the space below this block comment and put them in numerical order
     2) record accoustic instruments
     3) reduce background noise
 
-
+10) Music Studio Computer Setup
+5 properties:
+    1) computer
+    2) audio interface
+    3) studio monitors
+    4) MIDI keyboard
+    5) microphone
+3 things it can do:
+    1) record music
+    2) edit audio track
+    3) play virtual instruments
 
 
 
