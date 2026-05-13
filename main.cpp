@@ -434,65 +434,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) Computer
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) CPU speed in GHz
+    2) amount of RAM in Gb
+    3) storage size in Gb
+    4) operating system name
+    5) number of USB ports
 3 things it can do:
-    1)
-    2)
-    3)
+    1) run audio software
+    2) save project files
+    3) process audio plugins
 
-Thing 6)
+Thing 6) Audio Interface
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of input channels
+    2) number of output channels
+    3) sample rate in KHz
+    4) phantom power enabled
+    5) headphone output volume
 3 things it can do:
-    1)
-    2)
-    3)
+    1) convert analog audio to digital audio
+    2) send audio to studio monitors
+    3) connect microphones and instruments
 
-Thing 7)
+Thing 7) Studio Monitors
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) speaker size in inches
+    2) power outputs in watts
+    3) frequency response range in Hz
+    4) volume level
+    5) cabinet width in cm
 3 things it can do:
-    1)
-    2)
-    3)
+    1) play audio playback
+    2) reproduce low frequencies
+    3) monitor a recording session
 
-Thing 8)
+Thing 8) MIDI keyboard
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of keys
+    2) octave range
+    3) velocity sensitivity enabled
+    4) number of controls knobs
+    5) USB connection type
 3 things it can do:
-    1)
-    2)
-    3)
+    1) send MIDI notes
+    2) control virtual instruments
+    3) adjust plugin parameters
 
-Thing 9)
+Thing 9) Microphone
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) microphone type
+    2) frequency response range in Hz
+    3) sensitivity level
+    4) cable lenght in meters
+    5) maximum sound pressure level in dB
 3 things it can do:
-    1)
-    2)
-    3)
+    1) capture vocal recordings
+    2) record accoustic instruments
+    3) reduce background noise
  */
 
 /*
