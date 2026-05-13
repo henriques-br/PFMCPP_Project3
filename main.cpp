@@ -436,11 +436,11 @@ example:
 
 Thing 5) Computer
 5 properties:
-    1) CPU speed in GHz
-    2) amount of RAM in Gb
-    3) storage size in Gb
-    4) operating system name
-    5) number of USB ports
+    1) CPU speed in GHz (double)
+    2) amount of RAM in Gb (int)
+    3) storage size in Gb (int)
+    4) operating system name (std::string)
+    5) number of USB ports (int)
 3 things it can do:
     1) run audio software
     2) save project files
@@ -448,11 +448,11 @@ Thing 5) Computer
 
 Thing 6) Audio Interface
 5 properties:
-    1) number of input channels
-    2) number of output channels
-    3) sample rate in KHz
-    4) phantom power enabled
-    5) headphone output volume
+    1) number of input channels (int)
+    2) number of output channels (int)
+    3) sample rate in KHz (double)
+    4) phantom power enabled (bool)
+    5) headphone output volume (float)
 3 things it can do:
     1) convert analog audio to digital audio
     2) send audio to studio monitors
@@ -460,11 +460,11 @@ Thing 6) Audio Interface
 
 Thing 7) Studio Monitors
 5 properties:
-    1) speaker size in inches
-    2) power outputs in watts
-    3) frequency response range in Hz
-    4) volume level
-    5) cabinet width in cm
+    1) speaker size in inches (double)
+    2) power outputs in watts (int)
+    3) frequency response range in Hz (float)
+    4) volume level (float)
+    5) cabinet width in cm (double)
 3 things it can do:
     1) play audio playback
     2) reproduce low frequencies
@@ -472,11 +472,11 @@ Thing 7) Studio Monitors
 
 Thing 8) MIDI keyboard
 5 properties:
-    1) number of keys
-    2) octave range
-    3) velocity sensitivity enabled
-    4) number of controls knobs
-    5) USB connection type
+    1) number of keys (int)
+    2) octave range (int)
+    3) velocity sensitivity enabled (bool)
+    4) number of controls knobs (int)
+    5) USB connection type (std::string)
 3 things it can do:
     1) send MIDI notes
     2) control virtual instruments
@@ -484,11 +484,11 @@ Thing 8) MIDI keyboard
 
 Thing 9) Microphone
 5 properties:
-    1) microphone type
-    2) frequency response range in Hz
-    3) sensitivity level
-    4) cable lenght in meters
-    5) maximum sound pressure level in dB
+    1) microphone type (std::string)
+    2) frequency response range in Hz (float)
+    3) sensitivity level (double)
+    4) cable lenght in meters (double)
+    5) maximum sound pressure level in dB (int)
 3 things it can do:
     1) capture vocal recordings
     2) record accoustic instruments
