@@ -454,6 +454,31 @@ struct CoffeeShop
     // shop name (std::string)
     std::string shopName = "Prenda Cafe";
     
+    //this is the nested UDT:
+    struct CoffeeMachine
+    {
+        // machine model name (std::string)
+        std::string machineModelName = "Nespresso Aguila 440";
+        // water tank capacity in liters (float)
+        float waterTankCapacityInLiters = 2.5f;
+        // number of espresso shots made today (int)
+        int numOfEspressoShotsMadeToday = 120;
+        // machine temperature in Celsius (double)
+        double machineTemperatureInCelsius = 93.5;
+        // steam wand enabled (bool)
+        bool isSteamWandEnabled = true;
+
+        //3 things it can do:
+        //1) make espresso
+        void makeEspresso(int numOfShots);
+
+        //2) steam milk
+        void steamMilk(float milkAmountInMl);
+
+        //3) clean machine
+        bool cleanMachine(); // returns true if cleaning was successful
+    }
+    
     //3 things it can do:
     //1) brew coffee
     void brewCoffee( int numOfCups);
@@ -499,6 +524,35 @@ struct FitnessTracker
     std::string deviceColor = "Blue";
     // daily calorie count (double)
     double dailyCalorieCount = 645;
+    
+    //this is the nested UDT:
+    struct WorkoutSession
+    {
+        // workout type (std::string)
+        std::string workoutType = "Running";
+
+        // workout duration in minutes (int)
+        int workoutDurationInMinutes = 45;
+
+        // calories burned (double)
+        double caloriesBurned = 520.5;
+
+        // average heart rate (int)
+        int averageHeartRate = 138;
+
+        // GPS tracking enabled (bool)
+        bool isGpsTrackingEnabled = true;
+
+        //3 things it can do:
+        //1) start workout
+        void startWorkout();
+
+        //2) pause workout
+        void pauseWorkout();
+
+        //3) end workout
+        bool endWorkout(); // returns true if workout ended successfully
+    };
     
     //3 things it can do:
     //    1) track workouts
