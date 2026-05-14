@@ -477,7 +477,7 @@ struct CoffeeShop
 
         //3) clean machine
         bool cleanMachine(); // returns true if cleaning was successful
-    }
+    };
     
     //3 things it can do:
     //1) brew coffee
