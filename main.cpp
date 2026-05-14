@@ -440,175 +440,175 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
-/*
-1) Coffee Shop
-5 properties:
-    1) number of coffee machines (int)
-    2) number of employees (int)
-    3) amount of coffee beans in storage (float)
-    4) daily profit amount (double)
-    5) shop name (std::string)
-3 things it can do:
-    1) brew coffee
-    2) serve customers
-    3) clean tables
-*/
+
 struct CoffeeShop
 {
-    
+    /*
+    1) Coffee Shop
+    5 properties:
+        1) number of coffee machines (int)
+        2) number of employees (int)
+        3) amount of coffee beans in storage (float)
+        4) daily profit amount (double)
+        5) shop name (std::string)
+    3 things it can do:
+        1) brew coffee
+        2) serve customers
+        3) clean tables
+    */
 };
-/*
- 2) Video Game Console
-5 properties:
-    1) storage capacity in gigabytes (int)
-    2) number of installed games (int)
-    3) controller battery level (float)
-    4) console model name (std::string)
-    5) screen resolution setting (std::string)
-3 things it can do:
-    1) launch games
-    2) save game progress
-    3) connect to the internet
-*/
 struct VideoGameConsole
 {
-    
+    /*
+     2) Video Game Console
+    5 properties:
+        1) storage capacity in gigabytes (int)
+        2) number of installed games (int)
+        3) controller battery level (float)
+        4) console model name (std::string)
+        5) screen resolution setting (std::string)
+    3 things it can do:
+        1) launch games
+        2) save game progress
+        3) connect to the internet
+    */
+
 };
-/*
- 3) Fitness Tracker
-5 properties:
-    1) battery percentage (float)
-    2) number of steps recorded (int)
-    3) heart rate value (int)
-    4) device color (std::string)
-    5) daily calorie count (double)
-3 things it can do:
-    1) track workouts
-    2) display notifications
-    3) monitor sleep
-*/
 struct FitnessTracker
 {
-    
+    /*
+     3) Fitness Tracker
+    5 properties:
+        1) battery percentage (float)
+        2) number of steps recorded (int)
+        3) heart rate value (int)
+        4) device color (std::string)
+        5) daily calorie count (double)
+    3 things it can do:
+        1) track workouts
+        2) display notifications
+        3) monitor sleep
+    */
+
 };
-/*
-4) Music Studio
-5 properties:
-    1) number of studio monitors (int)
-    2) number of microphones )int)
-    3) room size in square feet (double)
-    4) recording software name (std::string)
-    5) hourly rental price (float)
-3 things it can do:
-    1) record vocals
-    2) mix audio tracks
-    3) export music files
-*/
 struct MusicStudio
 {
-    
+    /*
+    4) Music Studio
+    5 properties:
+        1) number of studio monitors (int)
+        2) number of microphones )int)
+        3) room size in square feet (double)
+        4) recording software name (std::string)
+        5) hourly rental price (float)
+    3 things it can do:
+        1) record vocals
+        2) mix audio tracks
+        3) export music files
+    */
+
 };
-/*
-5) Computer
-5 properties:
-    1) CPU speed in GHz (double)
-    2) amount of RAM in Gb (int)
-    3) storage size in Gb (int)
-    4) operating system name (std::string)
-    5) number of USB ports (int)
-3 things it can do:
-    1) run audio software
-    2) save project files
-    3) process audio plugins
-*/
 struct Computer
 {
-    
+    /*
+    5) Computer
+    5 properties:
+        1) CPU speed in GHz (double)
+        2) amount of RAM in Gb (int)
+        3) storage size in Gb (int)
+        4) operating system name (std::string)
+        5) number of USB ports (int)
+    3 things it can do:
+        1) run audio software
+        2) save project files
+        3) process audio plugins
+    */
+
 };
-/*
- 6) Audio Interface
-5 properties:
-    1) number of input channels (int)
-    2) number of output channels (int)
-    3) sample rate in KHz (double)
-    4) phantom power enabled (bool)
-    5) headphone output volume (float)
-3 things it can do:
-    1) convert analog audio to digital audio
-    2) send audio to studio monitors
-    3) connect microphones and instruments
-*/
 struct AudioInterface
 {
-    
+    /*
+     6) Audio Interface
+    5 properties:
+        1) number of input channels (int)
+        2) number of output channels (int)
+        3) sample rate in KHz (double)
+        4) phantom power enabled (bool)
+        5) headphone output volume (float)
+    3 things it can do:
+        1) convert analog audio to digital audio
+        2) send audio to studio monitors
+        3) connect microphones and instruments
+    */
+
 };
-/*
- 7) Studio Monitors
-5 properties:
-    1) speaker size in inches (double)
-    2) power outputs in watts (int)
-    3) frequency response range in Hz (float)
-    4) volume level (float)
-    5) cabinet width in cm (double)
-3 things it can do:
-    1) play audio playback
-    2) reproduce low frequencies
-    3) monitor a recording session
-*/
 struct StudioMonitors
 {
-    
+    /*
+     7) Studio Monitors
+    5 properties:
+        1) speaker size in inches (double)
+        2) power outputs in watts (int)
+        3) frequency response range in Hz (float)
+        4) volume level (float)
+        5) cabinet width in cm (double)
+    3 things it can do:
+        1) play audio playback
+        2) reproduce low frequencies
+        3) monitor a recording session
+    */
+
 };
-/*
- 8) MIDI keyboard
-5 properties:
-    1) number of keys (int)
-    2) octave range (int)
-    3) velocity sensitivity enabled (bool)
-    4) number of controls knobs (int)
-    5) USB connection type (std::string)
-3 things it can do:
-    1) send MIDI notes
-    2) control virtual instruments
-    3) adjust plugin parameters
-*/
 struct MidiKeyboard
 {
-    
+    /*
+     8) MIDI keyboard
+    5 properties:
+        1) number of keys (int)
+        2) octave range (int)
+        3) velocity sensitivity enabled (bool)
+        4) number of controls knobs (int)
+        5) USB connection type (std::string)
+    3 things it can do:
+        1) send MIDI notes
+        2) control virtual instruments
+        3) adjust plugin parameters
+    */
+
 };
-/*
-9) Microphone
-5 properties:
-    1) microphone type (std::string)
-    2) frequency response range in Hz (float)
-    3) sensitivity level (double)
-    4) cable lenght in meters (double)
-    5) maximum sound pressure level in dB (int)
-3 things it can do:
-    1) capture vocal recordings
-    2) record accoustic instruments
-    3) reduce background noise
-*/
 struct Microphone
 {
-    
+    /*
+    9) Microphone
+    5 properties:
+        1) microphone type (std::string)
+        2) frequency response range in Hz (float)
+        3) sensitivity level (double)
+        4) cable lenght in meters (double)
+        5) maximum sound pressure level in dB (int)
+    3 things it can do:
+        1) capture vocal recordings
+        2) record accoustic instruments
+        3) reduce background noise
+    */
+
 };
-/*
- 10) Music Studio Computer Setup
-5 properties:
-    1) computer
-    2) audio interface
-    3) studio monitors
-    4) MIDI keyboard
-    5) microphone
-3 things it can do:
-    1) record music
-    2) edit audio track
-    3) play virtual instruments
-*/
 struct MusicStudioComputerSetup
 {
-    
+    /*
+     10) Music Studio Computer Setup
+    5 properties:
+        1) computer
+        2) audio interface
+        3) studio monitors
+        4) MIDI keyboard
+        5) microphone
+    3 things it can do:
+        1) record music
+        2) edit audio track
+        3) play virtual instruments
+    */
+
 };
 
 
