@@ -440,6 +440,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
+/*
 1) Coffee Shop
 5 properties:
     1) number of coffee machines (int)
@@ -451,8 +452,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) brew coffee
     2) serve customers
     3) clean tables
-
-2) Video Game Console
+*/
+struct CoffeeShop
+{
+    
+};
+/*
+ 2) Video Game Console
 5 properties:
     1) storage capacity in gigabytes (int)
     2) number of installed games (int)
@@ -463,8 +469,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) launch games
     2) save game progress
     3) connect to the internet
-
-3) Fitness Tracker
+*/
+struct VideoGameConsole
+{
+    
+};
+/*
+ 3) Fitness Tracker
 5 properties:
     1) battery percentage (float)
     2) number of steps recorded (int)
@@ -475,7 +486,12 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) track workouts
     2) display notifications
     3) monitor sleep
-
+*/
+struct FitnessTracker
+{
+    
+};
+/*
 4) Music Studio
 5 properties:
     1) number of studio monitors (int)
@@ -487,7 +503,12 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) record vocals
     2) mix audio tracks
     3) export music files
-
+*/
+struct MusicStudio
+{
+    
+};
+/*
 5) Computer
 5 properties:
     1) CPU speed in GHz (double)
@@ -499,8 +520,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) run audio software
     2) save project files
     3) process audio plugins
-
-6) Audio Interface
+*/
+struct Computer
+{
+    
+};
+/*
+ 6) Audio Interface
 5 properties:
     1) number of input channels (int)
     2) number of output channels (int)
@@ -511,8 +537,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) convert analog audio to digital audio
     2) send audio to studio monitors
     3) connect microphones and instruments
-
-7) Studio Monitors
+*/
+struct AudioInterface
+{
+    
+};
+/*
+ 7) Studio Monitors
 5 properties:
     1) speaker size in inches (double)
     2) power outputs in watts (int)
@@ -523,8 +554,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) play audio playback
     2) reproduce low frequencies
     3) monitor a recording session
-
-8) MIDI keyboard
+*/
+struct StudioMonitors
+{
+    
+};
+/*
+ 8) MIDI keyboard
 5 properties:
     1) number of keys (int)
     2) octave range (int)
@@ -535,7 +571,12 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) send MIDI notes
     2) control virtual instruments
     3) adjust plugin parameters
-
+*/
+struct MidiKeyboard
+{
+    
+};
+/*
 9) Microphone
 5 properties:
     1) microphone type (std::string)
@@ -547,8 +588,13 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) capture vocal recordings
     2) record accoustic instruments
     3) reduce background noise
-
-10) Music Studio Computer Setup
+*/
+struct Microphone
+{
+    
+};
+/*
+ 10) Music Studio Computer Setup
 5 properties:
     1) computer
     2) audio interface
@@ -559,7 +605,11 @@ MOVE THEM to the space below this block comment and put them in numerical order
     1) record music
     2) edit audio track
     3) play virtual instruments
-
+*/
+struct MusicStudioComputerSetup
+{
+    
+};
 
 
 /*
