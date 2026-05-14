@@ -481,13 +481,16 @@ struct CoffeeShop
     
     //3 things it can do:
     //1) brew coffee
-    void brewCoffee( int numOfCups);
+    void brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups);
     
     //2) serve customers
     void serveCustomers(int numOfCustomers);
     
     //3) clean tables
     void cleanTables(int numOfTables);
+    
+    // member variable whose type is a UDT
+    CoffeeMachine currentCoffeeMachine;
 };
 struct VideoGameConsole
 {
@@ -552,17 +555,21 @@ struct FitnessTracker
 
         //3) end workout
         bool endWorkout(); // returns true if workout ended successfully
+        
     };
     
     //3 things it can do:
     //    1) track workouts
-    void trackWorkout(std::string workoutType, int workoutMinutes);
+    void trackWorkout(WorkoutSession currentWorkoutSession);
     
     //    2) display notifications
     void displayNotification(std::string notificationMessage);
     
     //    3) monitor sleep
     double monitorSleep(int hoursSlept);    // returns total hours slept
+    
+    // member variable whose type is a UDT
+    WorkoutSession currentWorkoutSession;
 };
 struct MusicStudio
 {
