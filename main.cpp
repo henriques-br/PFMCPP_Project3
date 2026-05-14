@@ -443,172 +443,174 @@ MOVE THEM to the space below this block comment and put them in numerical order
 
 struct CoffeeShop
 {
-    /*
-    1) Coffee Shop
-    5 properties:
-        1) number of coffee machines (int)
-        2) number of employees (int)
-        3) amount of coffee beans in storage (float)
-        4) daily profit amount (double)
-        5) shop name (std::string)
-    3 things it can do:
-        1) brew coffee
-        2) serve customers
-        3) clean tables
-    */
+    // number of coffee machines (int)
+    int numOfCoffeeMachines = 4;
+    // number of employees (int)
+    int numOfEmployees = 8;
+    // amount of coffee beans in storage (float)
+    float amountOfCoffeBeanInStorage = 25.f;
+    // daily profit amount (double)
+    double dailyProfitAmount =  1500;
+    // shop name (std::string)
+    std::string shopName = "Prenda Cafe";
+    //3 things it can do:
+    //1) brew coffee
+    //2) serve customers
+    //3) clean tables
 };
 struct VideoGameConsole
 {
-    /*
-     2) Video Game Console
-    5 properties:
-        1) storage capacity in gigabytes (int)
-        2) number of installed games (int)
-        3) controller battery level (float)
-        4) console model name (std::string)
-        5) screen resolution setting (std::string)
-    3 things it can do:
-        1) launch games
-        2) save game progress
-        3) connect to the internet
-    */
+    // storage capacity in gigabytes (int)
+    int storageCapacityInGb = 500;
+    // number of installed games (int)
+    int numOfInstalledGames = 15;
+    // controller battery level (float)
+    float controllerBatteryLevel = 82;
+    // console model name (std::string)
+    std::string consoleModelName = "PS5";
+    // screen resolution setting (std::string)
+    std::string screenResolutionSetting = "1759X1354";
+    //3 things it can do:
+    //    1) launch games
+    //    2) save game progress
+    //    3) connect to the internet
 
 };
 struct FitnessTracker
 {
-    /*
-     3) Fitness Tracker
-    5 properties:
-        1) battery percentage (float)
-        2) number of steps recorded (int)
-        3) heart rate value (int)
-        4) device color (std::string)
-        5) daily calorie count (double)
-    3 things it can do:
-        1) track workouts
-        2) display notifications
-        3) monitor sleep
-    */
-
+    // battery percentage (float)
+    float batteryPercentage = 75.f;
+    // number of steps recorded (int)
+    int numOfStepsRecorded = 127;
+    // heart rate value (int)
+    int heartRateValue = 145;
+    // device color (std::string)
+    std::string deviceColor = "Blue";
+    // daily calorie count (double)
+    double dailyCalorieCount = 645;
+    //3 things it can do:
+    //    1) track workouts
+    //    2) display notifications
+    //    3) monitor sleep
 };
 struct MusicStudio
 {
-    /*
-    4) Music Studio
-    5 properties:
-        1) number of studio monitors (int)
-        2) number of microphones )int)
-        3) room size in square feet (double)
-        4) recording software name (std::string)
-        5) hourly rental price (float)
-    3 things it can do:
-        1) record vocals
-        2) mix audio tracks
-        3) export music files
-    */
-
+    // number of studio monitors (int)
+    int numOfStudioMonitors = 8;
+    // number of microphones )int)
+    int numOfMicrophones = 10;
+    // room size in square feet (double)
+    double roomSizeInSquareFeet = 50;
+    // recording software name (std::string)
+    std::string recordingSoftwareName = "Logic Pro";
+    // hourly rental price (float)
+    float hourlyRentalPrice = 135.f;
+    /3 things it can do:
+    /    1) record vocals
+    /    2) mix audio tracks
+    /    3) export music files
 };
 struct Computer
 {
-    /*
-    5) Computer
-    5 properties:
-        1) CPU speed in GHz (double)
-        2) amount of RAM in Gb (int)
-        3) storage size in Gb (int)
-        4) operating system name (std::string)
-        5) number of USB ports (int)
-    3 things it can do:
-        1) run audio software
-        2) save project files
-        3) process audio plugins
-    */
-
+    // CPU speed in GHz (double)
+    double cpuSpeedInGhz = 4;
+    // amount of RAM in Gb (int)
+    int amountRamInGb = 128;
+    // storage size in Gb (int)
+    int storageSizeInGb = 8000;
+    // operating system name (std::string)
+    std::string operatingSystemName = "MacOS Tahoe";
+    // number of USB ports (int)
+    int numOfUsbPorts = 8;
+    //3 things it can do:
+    //    1) run audio software
+    //    2) save project files
+    //    3) process audio plugins
 };
 struct AudioInterface
 {
-    /*
-     6) Audio Interface
-    5 properties:
-        1) number of input channels (int)
-        2) number of output channels (int)
-        3) sample rate in KHz (double)
-        4) phantom power enabled (bool)
-        5) headphone output volume (float)
-    3 things it can do:
-        1) convert analog audio to digital audio
-        2) send audio to studio monitors
-        3) connect microphones and instruments
-    */
-
+    // number of input channels (int)
+    int numOfInputChannels = 26;
+    // number of output channels (int)
+    int numOfCoutputChannels = 20;
+    // sample rate in KHz (double)
+    double sampleRateInKhz = 48000;
+    // phantom power enabled (bool)
+    bool isPhantonPowerEnabled = true;
+    // headphone output volume (float)
+    float headphoneOutputVolume = 45.5f;
+    //3 things it can do:
+    //    1) convert analog audio to digital audio
+    //    2) send audio to studio monitors
+    //    3) connect microphones and instruments
 };
 struct StudioMonitors
 {
-    /*
-     7) Studio Monitors
-    5 properties:
-        1) speaker size in inches (double)
-        2) power outputs in watts (int)
-        3) frequency response range in Hz (float)
-        4) volume level (float)
-        5) cabinet width in cm (double)
-    3 things it can do:
-        1) play audio playback
-        2) reproduce low frequencies
-        3) monitor a recording session
-    */
-
+    // speaker size in inches (double)
+    double speakerSizeInInches = 10;
+    // power outputs in watts (int)
+    int powerOutputsInWatts = 1200;
+    // frequency response range in Hz (float)
+    float frequencyResponseRangeInHz = 250;
+    // volume level (float)
+    float volumeLevel = 45.f;
+    // cabinet width in cm (double)
+    double cabinetWidthInCm = 30;
+    //3 things it can do:
+    //    1) play audio playback
+    //    2) reproduce low frequencies
+    //    3) monitor a recording session
 };
 struct MidiKeyboard
 {
-    /*
-     8) MIDI keyboard
-    5 properties:
-        1) number of keys (int)
-        2) octave range (int)
-        3) velocity sensitivity enabled (bool)
-        4) number of controls knobs (int)
-        5) USB connection type (std::string)
-    3 things it can do:
-        1) send MIDI notes
-        2) control virtual instruments
-        3) adjust plugin parameters
-    */
-
+    // number of keys (int)
+    int numOfKeys = 88;
+    // octave range (int)
+    int octaveRange = 7;
+    // velocity sensitivity enabled (bool)
+    bool isVelocitySensitivityEnabled = true;
+    // number of controls knobs (int)
+    int numOfControlKnobs = 12;
+    // USB connection type (std::string)
+    std::string usbConnectionType = "USB-C";
+    //3 things it can do:
+    //    1) send MIDI notes
+    //    2) control virtual instruments
+    //    3) adjust plugin parameters
 };
 struct Microphone
 {
-    /*
-    9) Microphone
-    5 properties:
-        1) microphone type (std::string)
-        2) frequency response range in Hz (float)
-        3) sensitivity level (double)
-        4) cable lenght in meters (double)
-        5) maximum sound pressure level in dB (int)
-    3 things it can do:
-        1) capture vocal recordings
-        2) record accoustic instruments
-        3) reduce background noise
-    */
-
+    // microphone type (std::string)
+    std::string microphoneType = "Condenser";
+    // frequency response range in Hz (float)
+    float frequencyResponseRangeInHz = 80;
+    // sensitivity level (double)
+    double sensitivityLevel = 5;
+    // cable lenght in meters (double)
+    double cableLenghtInMeters = 2;
+    // maximum sound pressure level in dB (int)
+    int maximumSoundPressureLevelInDb = 12;
+    //3 things it can do:
+    //    1) capture vocal recordings
+    //    2) record accoustic instruments
+    //    3) reduce background noise
 };
 struct MusicStudioComputerSetup
 {
-    /*
-     10) Music Studio Computer Setup
-    5 properties:
-        1) computer
-        2) audio interface
-        3) studio monitors
-        4) MIDI keyboard
-        5) microphone
-    3 things it can do:
-        1) record music
-        2) edit audio track
-        3) play virtual instruments
-    */
-
+    //    1) computer
+    Computer computer;
+    //    2) audio interface
+    AudioInterface audioInterface;
+    //    3) studio monitors
+    StudioMonitors studioMonitors;
+    //    4) MIDI keyboard
+    MidiKeyboard midiKeyboard;
+    //    5) microphone
+    Microphone microphone;
+    //3 things it can do:
+    //    1) record music
+    //    2) edit audio track
+    //    3) play virtual instruments
 };
 
 
