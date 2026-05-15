@@ -410,6 +410,25 @@ struct AudioInterface
     bool connectMicrophone(std::string microphoneName);
 };
 
+void AudioInterface::convertAnalogToDigitalAudio()
+{
+    std::cout << "Converting analog audio to digital audio\n";
+}
+
+void AudioInterface::sendAudioToStudioMonitors(float outputVolume)
+{
+    headphoneOutputVolume = outputVolume;
+
+    std::cout << "Sending audio to studio monitors at volume " << outputVolume << "\n";
+}
+
+bool AudioInterface::connectMicrophone(std::string microphoneName)
+{
+    std::cout << "Connecting microphone " << microphoneName << "\n";
+
+    return true;
+}
+
 struct StudioMonitors
 {
     double speakerSizeInInches = 10;
