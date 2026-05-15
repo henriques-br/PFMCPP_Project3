@@ -470,6 +470,21 @@ struct MidiKeyboard
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
 
+void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
+{
+    std::cout << "Sending MIDI note " << midiNoteNumber << "\n";
+}
+
+void MidiKeyboard::controlVirtualInstrument(std::string instrumentName)
+{
+    std::cout << "Controlling virtual instrument " << instrumentName << "\n";
+}
+
+void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parameterValue)
+{
+    std::cout << "Adjusting parameter " << parameterName << " to " << parameterValue << "\n";
+}
+
 struct Microphone
 {
     std::string microphoneType = "Condenser";
