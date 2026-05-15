@@ -299,6 +299,44 @@ struct FitnessTracker
     WorkoutSession currentWorkoutSession;
 };
 
+void FitnessTracker::WorkoutSession::startWorkout()
+{
+    std::cout << "Starting " << workoutType << " workout\n";
+}
+
+void FitnessTracker::WorkoutSession::pauseWorkout()
+{
+    std::cout << "Pausing " << workoutType << " workout\n";
+}
+
+bool FitnessTracker::WorkoutSession::endWorkout()
+{
+    std::cout << "Ending " << workoutType << " workout\n";
+
+    return true;
+}
+
+void FitnessTracker::trackWorkout(WorkoutSession currentWorkoutSession)
+{
+    std::cout << "Tracking workout type: " << currentWorkoutSession.workoutType << "\n";
+
+    std::cout << "Workout duration: " << currentWorkoutSession.workoutDurationInMinutes << " minutes\n";
+}
+
+void FitnessTracker::displayNotification(std::string notificationMessage)
+{
+    std::cout << "Notification: " << notificationMessage << "\n";
+}
+
+double FitnessTracker::monitorSleep(int hoursSlept)
+{
+    double sleepQualityScore = hoursSlept * 10.0;
+
+    std::cout << "User slept for " << hoursSlept << " hours\n";
+
+    return sleepQualityScore;
+}
+
 struct MusicStudio
 {
     int numOfStudioMonitors = 8;
