@@ -528,6 +528,35 @@ struct MusicStudioComputerSetup
     void playVirtualInstrument(std::string instrumentName);
 };
 
+void MusicStudioComputerSetup::recordMusic(std::string projectName)
+{
+    computer.runAudioSoftware(projectName);
+
+    microphone.captureVocalRecording("Lead Vocalist");
+
+    audioInterface.convertAnalogToDigitalAudio();
+
+    std::cout << "Recording music project: " << projectName << "\n";
+}
+
+void MusicStudioComputerSetup::editAudioTrack(std::string trackName)
+{
+    computer.saveProjectFile(trackName);
+
+    studioMonitors.monitorRecordingSession(60);
+
+    std::cout << "Editing audio track: " << trackName << "\n";
+}
+
+void MusicStudioComputerSetup::playVirtualInstrument(std::string instrumentName)
+{
+    midiKeyboard.controlVirtualInstrument(instrumentName);
+
+    studioMonitors.playAudioPlayback(instrumentName);
+
+    std::cout << "Playing virtual instrument: " << instrumentName << "\n";
+}
+
 int main()
 {
     std::cout << "good to go!" << std::endl;
