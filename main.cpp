@@ -380,6 +380,23 @@ struct Computer
     int processAudioPlugins(int numOfPlugins);
 };
 
+void Computer::runAudioSoftware(std::string softwareName)
+{
+    std::cout << "Running audio software " << softwareName << "\n";
+}
+
+void Computer::saveProjectFile(std::string projectName)
+{
+    std::cout << "Saving project file " << projectName << "\n";
+}
+
+int Computer::processAudioPlugins(int numOfPlugins)
+{
+    std::cout << "Processing " << numOfPlugins << " audio plugins\n";
+
+    return numOfPlugins;
+}
+
 struct AudioInterface
 {
     int numOfInputChannels = 26;
