@@ -204,6 +204,43 @@ struct CoffeeShop
     CoffeeMachine currentCoffeeMachine;
 };
 
+void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
+{
+    numOfEspressoShotsMadeToday += numOfShots;
+
+    std::cout << "Making " << numOfShots << " " << (numOfShots == 1 ? "cup" : "cups") << " espresso shots\n";
+}
+
+void CoffeeShop::CoffeeMachine::steamMilk(float milkAmountInMl)
+{
+    std::cout << "Steaming " << milkAmountInMl << " ml of milk\n";
+}
+
+bool CoffeeShop::CoffeeMachine::cleanMachine()
+{
+    std::cout << "Cleaning coffee machine\n";
+
+    return true;
+}
+
+void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine,
+                            int numOfCups)
+{
+    activeCoffeeMachine.makeEspresso(numOfCups);
+
+    std::cout << "Brewing " << numOfCups << " cups of coffee\n";
+}
+
+void CoffeeShop::serveCustomers(int numOfCustomers)
+{
+    std::cout << "Serving " << numOfCustomers << " customers\n";
+}
+
+void CoffeeShop::cleanTables(int numOfTables)
+{
+    std::cout << "Cleaning " << numOfTables << " tables\n";
+}
+
 struct VideoGameConsole
 {
     int storageCapacityInGb = 500;
