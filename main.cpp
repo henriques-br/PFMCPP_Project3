@@ -254,6 +254,23 @@ struct VideoGameConsole
     bool connectToInternet(std::string wifiName);
 };
 
+void VideoGameConsole::launchGame(std::string gameName)
+{
+    std::cout << "Launching " << gameName << "\n";
+}
+
+void VideoGameConsole::saveGameProgress(std::string saveFileName)
+{
+    std::cout << "Saving game file " << saveFileName << "\n";
+}
+
+bool VideoGameConsole::connectToInternet(std::string wifiName)
+{
+    std::cout << "Connecting to wifi network " << wifiName << "\n";
+
+    return true;
+}
+
 struct FitnessTracker
 {
     float batteryPercentage = 75.f;
