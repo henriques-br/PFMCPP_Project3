@@ -498,6 +498,23 @@ struct Microphone
     bool reduceBackgroundNoise();   
 };
 
+void Microphone::captureVocalRecording(std::string vocalistName)
+{
+    std::cout << "Capturing vocals for " << vocalistName << "\n";
+}
+
+void Microphone::recordAcousticInstrument(std::string instrumentName)
+{
+    std::cout << "Recording acoustic instrument " << instrumentName << "\n";
+}
+
+bool Microphone::reduceBackgroundNoise()
+{
+    std::cout << "Reducing background noise\n";
+
+    return true;
+}
+
 struct MusicStudioComputerSetup
 {
     Computer computer;
