@@ -109,10 +109,53 @@ struct CarWash
     you should be able to deduce the return type of those functions based on their usage in Person::run()
     You'll need to insert the Person struct from the video in the space below.
  */
+struct Foot
+{
+    int footSize = 0;
 
+    void stepForward();
+    int stepSize();
+};
 
+void Foot::stepForward()
+{
+    std::cout << "Foot steps forward.\n";
+}
 
+int Foot::stepSize()
+{
+    return footSize;
+}
 
+struct Person
+{
+    int age = 0;
+    int height = 0;
+    int distanceTraveled = 0;
+    float hairLength = 0.f;
+    float GPA = 0.f;
+    unsigned int SATScore = 0;
+
+    Foot leftFoot;
+    Foot rightFoot;
+
+    void run(int howFast, bool startWithLeftFoot);
+};
+
+void Person::run(int howFast, bool startWithLeftFoot)
+{
+    if (startWithLeftFoot == true)
+    {
+        leftFoot.stepForward();
+        rightFoot.stepForward();
+    }
+    else
+    {
+        rightFoot.stepForward();
+        leftFoot.stepForward();
+    }
+    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+}
 
  /*
  2) provide implementations for the member functions you declared in your 10 user-defined types from the previous video outside of your UDT definitions.
@@ -151,7 +194,7 @@ struct CoffeeShop
 
         void makeEspresso(int numOfShots);
         void steamMilk(float milkAmountInMl);
-        bool cleanMachine(); // returns true if cleaning was successful
+        bool cleanMachine();
     };
     
     void brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups);
@@ -171,7 +214,7 @@ struct VideoGameConsole
     
     void launchGame(std::string gameName);
     void saveGameProgress(std::string saveFileName);
-    bool connectToInternet(std::string wifiName);   // returns true if connection was successful
+    bool connectToInternet(std::string wifiName);
 };
 
 struct FitnessTracker
@@ -192,12 +235,12 @@ struct FitnessTracker
 
         void startWorkout();
         void pauseWorkout();
-        bool endWorkout(); // returns true if workout ended successfully
+        bool endWorkout();
     };
     
     void trackWorkout(WorkoutSession currentWorkoutSession);
     void displayNotification(std::string notificationMessage);
-    double monitorSleep(int hoursSlept);    // returns total hours slept
+    double monitorSleep(int hoursSlept);
     
     WorkoutSession currentWorkoutSession;
 };
@@ -212,7 +255,7 @@ struct MusicStudio
 
     void recordVocals(std::string singerName);
     void mixAudioTracks(int numOfTracks);
-    std::string exportMusicFile(std::string fileName);  // returns exported file name
+    std::string exportMusicFile(std::string fileName);
 };
 
 struct Computer
@@ -225,7 +268,7 @@ struct Computer
     
     void runAudioSoftware(std::string softwareName);
     void saveProjectFile(std::string projectName);
-    int processAudioPlugins(int numOfPlugins);  // returns number of processed plugins
+    int processAudioPlugins(int numOfPlugins);
 };
 
 struct AudioInterface
@@ -238,7 +281,7 @@ struct AudioInterface
     
     void convertAnalogToDigitalAudio();
     void sendAudioToStudioMonitors(float outputVolume);
-    bool connectMicrophone(std::string microphoneName); // returns true if microphone connected successfully
+    bool connectMicrophone(std::string microphoneName);
 };
 
 struct StudioMonitors
@@ -277,7 +320,7 @@ struct Microphone
     
     void captureVocalRecording(std::string vocalistName);
     void recordAcousticInstrument(std::string instrumentName);
-    bool reduceBackgroundNoise();   // returns true if noise reduction was successful
+    bool reduceBackgroundNoise();   
 };
 
 struct MusicStudioComputerSetup
