@@ -350,6 +350,23 @@ struct MusicStudio
     std::string exportMusicFile(std::string fileName);
 };
 
+void MusicStudio::recordVocals(std::string singerName)
+{
+    std::cout << "Recording vocals for " << singerName << "\n";
+}
+
+void MusicStudio::mixAudioTracks(int numOfTracks)
+{
+    std::cout << "Mixing " << numOfTracks << " audio tracks\n";
+}
+
+std::string MusicStudio::exportMusicFile(std::string fileName)
+{
+    std::cout << "Exporting music file " << fileName << "\n";
+
+    return fileName;
+}
+
 struct Computer
 {
     double cpuSpeedInGhz = 4;
