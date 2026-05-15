@@ -442,6 +442,21 @@ struct StudioMonitors
     void monitorRecordingSession(int sessionDurationInMinutes);
 };
 
+void StudioMonitors::playAudioPlayback(std::string audioFileName)
+{
+    std::cout << "Playing audio file " << audioFileName << "\n";
+}
+
+void StudioMonitors::reproduceLowFrequencies()
+{
+    std::cout << "Reproducing low frequencies\n";
+}
+
+void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
+{
+    std::cout << "Monitoring recording session for " << sessionDurationInMinutes << " minutes\n";
+}
+
 struct MidiKeyboard
 {
     int numOfKeys = 88;
