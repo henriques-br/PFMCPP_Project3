@@ -109,9 +109,54 @@ struct CarWash
     you should be able to deduce the return type of those functions based on their usage in Person::run()
     You'll need to insert the Person struct from the video in the space below.
  */
+struct Foot
+{
+    int footSize = 0;
 
+    void stepForward();
+    int stepSize();
+};
 
+void Foot::stepForward()
+{
+    std::cout << "Foot steps forward.\n";
+}
 
+int Foot::stepSize()
+{
+    return footSize;
+}
+
+struct Person
+{
+    int age = 0;
+    int height = 0;
+    int distanceTraveled = 0;
+    float hairLength = 0.f;
+    float GPA = 0.f;
+    unsigned int SATScore = 0;
+
+    Foot leftFoot;
+    Foot rightFoot;
+
+    void run(int howFast, bool startWithLeftFoot);
+};
+
+void Person::run(int howFast, bool startWithLeftFoot)
+{
+    std::cout << "How fast  " << howFast << "\n";
+    if (startWithLeftFoot == true)
+    {
+        leftFoot.stepForward();
+        rightFoot.stepForward();
+    }
+    else
+    {
+        rightFoot.stepForward();
+        leftFoot.stepForward();
+    }
+    distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
+}
 
 
  /*
@@ -133,306 +178,385 @@ struct CarWash
  This usually means you have to use identical types for all variables used in an expression that is producing that conversion warning.
  */
 
-
 struct CoffeeShop
 {
-    // number of coffee machines (int)
     int numOfCoffeeMachines = 4;
-    // number of employees (int)
     int numOfEmployees = 8;
-    // amount of coffee beans in storage (float)
     float amountOfCoffeBeanInStorage = 25.f;
-    // daily profit amount (double)
     double dailyProfitAmount =  1500;
-    // shop name (std::string)
     std::string shopName = "Prenda Cafe";
     
-    //this is the nested UDT:
     struct CoffeeMachine
     {
-        // machine model name (std::string)
         std::string machineModelName = "Nespresso Aguila 440";
-        // water tank capacity in liters (float)
         float waterTankCapacityInLiters = 2.5f;
-        // number of espresso shots made today (int)
         int numOfEspressoShotsMadeToday = 120;
-        // machine temperature in Celsius (double)
         double machineTemperatureInCelsius = 93.5;
-        // steam wand enabled (bool)
         bool isSteamWandEnabled = true;
 
-        //3 things it can do:
-        //1) make espresso
         void makeEspresso(int numOfShots);
-
-        //2) steam milk
         void steamMilk(float milkAmountInMl);
-
-        //3) clean machine
-        bool cleanMachine(); // returns true if cleaning was successful
+        bool cleanMachine();
     };
     
-    //3 things it can do:
-    //1) brew coffee
     void brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups);
-    
-    //2) serve customers
     void serveCustomers(int numOfCustomers);
-    
-    //3) clean tables
     void cleanTables(int numOfTables);
     
-    // member variable whose type is a UDT
     CoffeeMachine currentCoffeeMachine;
 };
+
+void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
+{
+    numOfEspressoShotsMadeToday += numOfShots;
+
+    std::cout << "Making " << numOfShots << " " << (numOfShots == 1 ? "cup" : "cups") << " espresso shots\n";
+}
+
+void CoffeeShop::CoffeeMachine::steamMilk(float milkAmountInMl)
+{
+    std::cout << "Steaming " << milkAmountInMl << " ml of milk\n";
+}
+
+bool CoffeeShop::CoffeeMachine::cleanMachine()
+{
+    std::cout << "Cleaning coffee machine\n";
+
+    return true;
+}
+
+void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups)
+{
+    activeCoffeeMachine.makeEspresso(numOfCups);
+
+    std::cout << "Brewing " << numOfCups << " cups of coffee\n";
+}
+
+void CoffeeShop::serveCustomers(int numOfCustomers)
+{
+    std::cout << "Serving " << numOfCustomers << " customers\n";
+}
+
+void CoffeeShop::cleanTables(int numOfTables)
+{
+    std::cout << "Cleaning " << numOfTables << " tables\n";
+}
+
 struct VideoGameConsole
 {
-    // storage capacity in gigabytes (int)
     int storageCapacityInGb = 500;
-    // number of installed games (int)
     int numOfInstalledGames = 15;
-    // controller battery level (float)
     float controllerBatteryLevel = 82;
-    // console model name (std::string)
     std::string consoleModelName = "PS5";
-    // screen resolution setting (std::string)
     std::string screenResolutionSetting = "1759X1354";
     
-    //3 things it can do:
-    //    1) launch games
     void launchGame(std::string gameName);
-    
-    //    2) save game progress
     void saveGameProgress(std::string saveFileName);
-    
-    //    3) connect to the internet
-    bool connectToInternet(std::string wifiName);   // returns true if connection was successful
+    bool connectToInternet(std::string wifiName);
 };
+
+void VideoGameConsole::launchGame(std::string gameName)
+{
+    std::cout << "Launching " << gameName << "\n";
+}
+
+void VideoGameConsole::saveGameProgress(std::string saveFileName)
+{
+    std::cout << "Saving game file " << saveFileName << "\n";
+}
+
+bool VideoGameConsole::connectToInternet(std::string wifiName)
+{
+    std::cout << "Connecting to wifi network " << wifiName << "\n";
+
+    return true;
+}
+
 struct FitnessTracker
 {
-    // battery percentage (float)
     float batteryPercentage = 75.f;
-    // number of steps recorded (int)
     int numOfStepsRecorded = 127;
-    // heart rate value (int)
     int heartRateValue = 145;
-    // device color (std::string)
     std::string deviceColor = "Blue";
-    // daily calorie count (double)
     double dailyCalorieCount = 645;
     
-    //this is the nested UDT:
     struct WorkoutSession
     {
-        // workout type (std::string)
         std::string workoutType = "Running";
-
-        // workout duration in minutes (int)
         int workoutDurationInMinutes = 45;
-
-        // calories burned (double)
         double caloriesBurned = 520.5;
-
-        // average heart rate (int)
         int averageHeartRate = 138;
-
-        // GPS tracking enabled (bool)
         bool isGpsTrackingEnabled = true;
 
-        //3 things it can do:
-        //1) start workout
         void startWorkout();
-
-        //2) pause workout
         void pauseWorkout();
-
-        //3) end workout
-        bool endWorkout(); // returns true if workout ended successfully
-        
+        bool endWorkout();
     };
     
-    //3 things it can do:
-    //    1) track workouts
-    void trackWorkout(WorkoutSession currentWorkoutSession);
-    
-    //    2) display notifications
+    void trackWorkout(WorkoutSession curWorkoutSession);
     void displayNotification(std::string notificationMessage);
+    double monitorSleep(int hoursSlept);
     
-    //    3) monitor sleep
-    double monitorSleep(int hoursSlept);    // returns total hours slept
-    
-    // member variable whose type is a UDT
     WorkoutSession currentWorkoutSession;
 };
+
+void FitnessTracker::WorkoutSession::startWorkout()
+{
+    std::cout << "Starting " << workoutType << " workout\n";
+}
+
+void FitnessTracker::WorkoutSession::pauseWorkout()
+{
+    std::cout << "Pausing " << workoutType << " workout\n";
+}
+
+bool FitnessTracker::WorkoutSession::endWorkout()
+{
+    std::cout << "Ending " << workoutType << " workout\n";
+
+    return true;
+}
+
+void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
+{
+    std::cout << "Tracking workout type: " << curWorkoutSession.workoutType << "\n";
+
+    std::cout << "Workout duration: " << curWorkoutSession.workoutDurationInMinutes << " minutes\n";
+}
+
+void FitnessTracker::displayNotification(std::string notificationMessage)
+{
+    std::cout << "Notification: " << notificationMessage << "\n";
+}
+
+double FitnessTracker::monitorSleep(int hoursSlept)
+{
+    double sleepQualityScore = hoursSlept * 10.0;
+
+    std::cout << "User slept for " << hoursSlept << " hours\n";
+
+    return sleepQualityScore;
+}
+
 struct MusicStudio
 {
-    // number of studio monitors (int)
     int numOfStudioMonitors = 8;
-    // number of microphones )int)
     int numOfMicrophones = 10;
-    // room size in square feet (double)
     double roomSizeInSquareFeet = 50;
-    // recording software name (std::string)
     std::string recordingSoftwareName = "Logic Pro";
-    // hourly rental price (float)
     float hourlyRentalPrice = 135.f;
-    
-    //3 things it can do:
-    //    1) record vocals
+
     void recordVocals(std::string singerName);
-    
-    //    2) mix audio tracks
     void mixAudioTracks(int numOfTracks);
-    
-    //    3) export music files
-    std::string exportMusicFile(std::string fileName);  // returns exported file name
+    std::string exportMusicFile(std::string fileName);
 };
+
+void MusicStudio::recordVocals(std::string singerName)
+{
+    std::cout << "Recording vocals for " << singerName << "\n";
+}
+
+void MusicStudio::mixAudioTracks(int numOfTracks)
+{
+    std::cout << "Mixing " << numOfTracks << " audio tracks\n";
+}
+
+std::string MusicStudio::exportMusicFile(std::string fileName)
+{
+    std::cout << "Exporting music file " << fileName << "\n";
+
+    return fileName;
+}
+
 struct Computer
 {
-    // CPU speed in GHz (double)
     double cpuSpeedInGhz = 4;
-    // amount of RAM in Gb (int)
     int amountRamInGb = 128;
-    // storage size in Gb (int)
     int storageSizeInGb = 8000;
-    // operating system name (std::string)
     std::string operatingSystemName = "MacOS Tahoe";
-    // number of USB ports (int)
     int numOfUsbPorts = 8;
     
-    //3 things it can do:
-    //    1) run audio software
     void runAudioSoftware(std::string softwareName);
-    
-    //    2) save project files
     void saveProjectFile(std::string projectName);
-    
-    //    3) process audio plugins
-    int processAudioPlugins(int numOfPlugins);  // returns number of processed plugins
+    int processAudioPlugins(int numOfPlugins);
 };
+
+void Computer::runAudioSoftware(std::string softwareName)
+{
+    std::cout << "Running audio software " << softwareName << "\n";
+}
+
+void Computer::saveProjectFile(std::string projectName)
+{
+    std::cout << "Saving project file " << projectName << "\n";
+}
+
+int Computer::processAudioPlugins(int numOfPlugins)
+{
+    std::cout << "Processing " << numOfPlugins << " audio plugins\n";
+
+    return numOfPlugins;
+}
+
 struct AudioInterface
 {
-    // number of input channels (int)
     int numOfInputChannels = 26;
-    // number of output channels (int)
-    int numOfCoutputChannels = 20;
-    // sample rate in KHz (double)
+    int numOfOutputChannels = 20;
     double sampleRateInKhz = 48000;
-    // phantom power enabled (bool)
     bool isPhantonPowerEnabled = true;
-    // headphone output volume (float)
     float headphoneOutputVolume = 45.5f;
     
-    //3 things it can do:
-    //    1) convert analog audio to digital audio
     void convertAnalogToDigitalAudio();
-    
-    //    2) send audio to studio monitors
     void sendAudioToStudioMonitors(float outputVolume);
-    
-    //    3) connect microphones and instruments
-    bool connectMicrophone(std::string microphoneName); // returns true if microphone connected successfully
+    bool connectMicrophone(std::string microphoneName);
 };
+
+void AudioInterface::convertAnalogToDigitalAudio()
+{
+    std::cout << "Converting analog audio to digital audio\n";
+}
+
+void AudioInterface::sendAudioToStudioMonitors(float outputVolume)
+{
+    headphoneOutputVolume = outputVolume;
+
+    std::cout << "Sending audio to studio monitors at volume " << outputVolume << "\n";
+}
+
+bool AudioInterface::connectMicrophone(std::string microphoneName)
+{
+    std::cout << "Connecting microphone " << microphoneName << "\n";
+
+    return true;
+}
+
 struct StudioMonitors
 {
-    // speaker size in inches (double)
     double speakerSizeInInches = 10;
-    // power outputs in watts (int)
     int powerOutputsInWatts = 1200;
-    // frequency response range in Hz (float)
     float frequencyResponseRangeInHz = 250;
-    // volume level (float)
     float volumeLevel = 45.f;
-    // cabinet width in cm (double)
     double cabinetWidthInCm = 30;
     
-    //3 things it can do:
-    //    1) play audio playback
     void playAudioPlayback(std::string audioFileName);
-    
-    //    2) reproduce low frequencies
     void reproduceLowFrequencies();
-    
-    //    3) monitor a recording session
     void monitorRecordingSession(int sessionDurationInMinutes);
 };
+
+void StudioMonitors::playAudioPlayback(std::string audioFileName)
+{
+    std::cout << "Playing audio file " << audioFileName << "\n";
+}
+
+void StudioMonitors::reproduceLowFrequencies()
+{
+    std::cout << "Reproducing low frequencies\n";
+}
+
+void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
+{
+    std::cout << "Monitoring recording session for " << sessionDurationInMinutes << " minutes\n";
+}
+
 struct MidiKeyboard
 {
-    // number of keys (int)
     int numOfKeys = 88;
-    // octave range (int)
     int octaveRange = 7;
-    // velocity sensitivity enabled (bool)
     bool isVelocitySensitivityEnabled = true;
-    // number of controls knobs (int)
     int numOfControlKnobs = 12;
-    // USB connection type (std::string)
     std::string usbConnectionType = "USB-C";
     
-    //3 things it can do:
-    //    1) send MIDI notes
     void sendMidiNotes(int midiNoteNumber);
-    
-    //    2) control virtual instruments
     void controlVirtualInstrument(std::string instrumentName);
-    
-    //    3) adjust plugin parameters
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
+
+void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
+{
+    std::cout << "Sending MIDI note " << midiNoteNumber << "\n";
+}
+
+void MidiKeyboard::controlVirtualInstrument(std::string instrumentName)
+{
+    std::cout << "Controlling virtual instrument " << instrumentName << "\n";
+}
+
+void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parameterValue)
+{
+    std::cout << "Adjusting parameter " << parameterName << " to " << parameterValue << "\n";
+}
+
 struct Microphone
 {
-    // microphone type (std::string)
     std::string microphoneType = "Condenser";
-    // frequency response range in Hz (float)
     float frequencyResponseRangeInHz = 80;
-    // sensitivity level (double)
     double sensitivityLevel = 5;
-    // cable lenght in meters (double)
     double cableLenghtInMeters = 2;
-    // maximum sound pressure level in dB (int)
     int maximumSoundPressureLevelInDb = 12;
     
-    //3 things it can do:
-    //    1) capture vocal recordings
     void captureVocalRecording(std::string vocalistName);
-    
-    //    2) record accoustic instruments
     void recordAcousticInstrument(std::string instrumentName);
-    
-    //    3) reduce background noise
-    bool reduceBackgroundNoise();   // returns true if noise reduction was successful
+    bool reduceBackgroundNoise();   
 };
+
+void Microphone::captureVocalRecording(std::string vocalistName)
+{
+    std::cout << "Capturing vocals for " << vocalistName << "\n";
+}
+
+void Microphone::recordAcousticInstrument(std::string instrumentName)
+{
+    std::cout << "Recording acoustic instrument " << instrumentName << "\n";
+}
+
+bool Microphone::reduceBackgroundNoise()
+{
+    std::cout << "Reducing background noise\n";
+
+    return true;
+}
+
 struct MusicStudioComputerSetup
 {
-    //    1) computer
     Computer computer;
-    //    2) audio interface
     AudioInterface audioInterface;
-    //    3) studio monitors
     StudioMonitors studioMonitors;
-    //    4) MIDI keyboard
     MidiKeyboard midiKeyboard;
-    //    5) microphone
     Microphone microphone;
     
-    //3 things it can do:
-    //    1) record music
     void recordMusic(std::string projectName);
-    
-    //    2) edit audio track
     void editAudioTrack(std::string trackName);
-    
-    //    3) play virtual instruments
     void playVirtualInstrument(std::string instrumentName);
 };
 
+void MusicStudioComputerSetup::recordMusic(std::string projectName)
+{
+    computer.runAudioSoftware(projectName);
 
+    microphone.captureVocalRecording("Lead Vocalist");
 
+    audioInterface.convertAnalogToDigitalAudio();
 
+    std::cout << "Recording music project: " << projectName << "\n";
+}
 
+void MusicStudioComputerSetup::editAudioTrack(std::string trackName)
+{
+    computer.saveProjectFile(trackName);
 
+    studioMonitors.monitorRecordingSession(60);
 
+    std::cout << "Editing audio track: " << trackName << "\n";
+}
 
+void MusicStudioComputerSetup::playVirtualInstrument(std::string instrumentName)
+{
+    midiKeyboard.controlVirtualInstrument(instrumentName);
+
+    studioMonitors.playAudioPlayback(instrumentName);
+
+    std::cout << "Playing virtual instrument: " << instrumentName << "\n";
+}
 
 int main()
 {
