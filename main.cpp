@@ -566,7 +566,11 @@ int main()
     studioComputer.runAudioSoftware("Reaper");
     studioComputer.saveProjectFile("AlbumSession");
     studioComputer.processAudioPlugins(15);
-
     
+    AudioInterface audioInterface;
+    audioInterface.convertAnalogToDigitalAudio();
+    audioInterface.sendAudioToStudioMonitors(75.0f);
+    audioInterface.connectMicrophone("Shure SM7B");
+
     std::cout << "good to go!" << std::endl;
 }
