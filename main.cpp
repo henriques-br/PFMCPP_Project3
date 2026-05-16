@@ -536,6 +536,13 @@ int main()
 
     //add your code here:
     
+    CoffeeShop coffeeShop;
+    coffeeShop.serveCustomers(12);
+    coffeeShop.cleanTables(5);
+    coffeeShop.currentCoffeeMachine.makeEspresso(3);
+    coffeeShop.currentCoffeeMachine.steamMilk(250.0f);
+    coffeeShop.currentCoffeeMachine.cleanMachine();
+    coffeeShop.brewCoffee(coffeeShop.currentCoffeeMachine, 10);
 
 
     
