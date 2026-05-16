@@ -535,7 +535,7 @@ int main()
     Example::main();
 
     //add your code here:
-    
+    std::cout << "=========== 1st UDT ===========" << std::endl;
     CoffeeShop coffeeShop;
     coffeeShop.serveCustomers(12);
     coffeeShop.cleanTables(5);
@@ -544,11 +544,13 @@ int main()
     coffeeShop.currentCoffeeMachine.cleanMachine();
     coffeeShop.brewCoffee(coffeeShop.currentCoffeeMachine, 10);
 
+    std::cout << "=========== 2nd UDT ===========" << std::endl;
     VideoGameConsole ps5;
     ps5.launchGame("FIFA 2026");
     ps5.saveGameProgress("save_file_01");
     std::cout << "Is console connected to internet? " << (ps5.connectToInternet("StudioWifi") == 1 ? "Yes" : "No") << "\n";
 
+    std::cout << "=========== 3rd UDT with nested ===========" << std::endl;
     FitnessTracker fitnessTracker;
     fitnessTracker.currentWorkoutSession.startWorkout();
     fitnessTracker.trackWorkout(fitnessTracker.currentWorkoutSession);
@@ -556,37 +558,44 @@ int main()
     fitnessTracker.monitorSleep(8);
     fitnessTracker.currentWorkoutSession.pauseWorkout();
     fitnessTracker.currentWorkoutSession.endWorkout();
-    
+
+    std::cout << "=========== 4th UDT ===========" << std::endl;
     MusicStudio musicStudio;
     musicStudio.recordVocals("Alex");
     musicStudio.mixAudioTracks(12);
     musicStudio.exportMusicFile("PFMSong.wav");
-    
+
+    std::cout << "=========== 5th UDT ===========" << std::endl;
     Computer studioComputer;
     studioComputer.runAudioSoftware("Reaper");
     studioComputer.saveProjectFile("AlbumSession");
     studioComputer.processAudioPlugins(15);
     
+    std::cout << "=========== 6th UDT ===========" << std::endl;
     AudioInterface audioInterface;
     audioInterface.convertAnalogToDigitalAudio();
     audioInterface.sendAudioToStudioMonitors(75.0f);
     audioInterface.connectMicrophone("Shure SM7B");
     
+    std::cout << "=========== 6th UDT ===========" << std::endl;
     StudioMonitors studioMonitors;
     studioMonitors.playAudioPlayback("MixSession.wav");
     studioMonitors.reproduceLowFrequencies();
     studioMonitors.monitorRecordingSession(90);
 
+    std::cout << "=========== 7th UDT ===========" << std::endl;
     MidiKeyboard midiKeyboard;
     midiKeyboard.sendMidiNotes(64);
     midiKeyboard.controlVirtualInstrument("Pianoteq 9");
     midiKeyboard.adjustPluginParameter("Reverb Mix", 0.75f);
     
+    std::cout << "=========== 9th UDT ===========" << std::endl;
     Microphone microphone;
     microphone.captureVocalRecording("Lead Singer");
     microphone.recordAcousticInstrument("Acoustic Guitar");
     microphone.reduceBackgroundNoise();
 
+    std::cout << "=========== 10th UDT with nested ===========" << std::endl;
     MusicStudioComputerSetup setup;
     setup.recordMusic("New Album");
     setup.editAudioTrack("Lead Vocals");
