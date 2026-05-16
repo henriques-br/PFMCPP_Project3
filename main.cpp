@@ -263,6 +263,8 @@ double FitnessTracker::monitorSleep(int hoursSlept)
 
 struct MusicStudio
 {
+    MusicStudio();
+    
     int numOfStudioMonitors = 8;
     int numOfMicrophones = 10;
     double roomSizeInSquareFeet = 50;
@@ -273,6 +275,11 @@ struct MusicStudio
     void mixAudioTracks(int numOfTracks);
     std::string exportMusicFile(std::string fileName);
 };
+
+MusicStudio::MusicStudio()
+{
+    std::cout << "MusicStudio being constructed!" << std::endl;
+}
 
 void MusicStudio::recordVocals(std::string singerName)
 {
