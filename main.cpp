@@ -483,6 +483,8 @@ bool Microphone::reduceBackgroundNoise()
 
 struct MusicStudioComputerSetup
 {
+    MusicStudioComputerSetup();
+    
     Computer computer;
     AudioInterface audioInterface;
     StudioMonitors studioMonitors;
@@ -493,6 +495,11 @@ struct MusicStudioComputerSetup
     void editAudioTrack(std::string trackName);
     void playVirtualInstrument(std::string instrumentName);
 };
+
+MusicStudioComputerSetup::MusicStudioComputerSetup()
+{
+    std::cout << "Microphone being constructed!" << std::endl;
+}
 
 void MusicStudioComputerSetup::recordMusic(std::string projectName)
 {
