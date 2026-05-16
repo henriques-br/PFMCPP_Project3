@@ -549,7 +549,6 @@ int main()
     ps5.saveGameProgress("save_file_01");
     std::cout << "Is console connected to internet? " << (ps5.connectToInternet("StudioWifi") == 1 ? "Yes" : "No") << "\n";
 
-    
     FitnessTracker fitnessTracker;
     fitnessTracker.currentWorkoutSession.startWorkout();
     fitnessTracker.trackWorkout(fitnessTracker.currentWorkoutSession);
@@ -557,6 +556,11 @@ int main()
     fitnessTracker.monitorSleep(8);
     fitnessTracker.currentWorkoutSession.pauseWorkout();
     fitnessTracker.currentWorkoutSession.endWorkout();
+    
+    MusicStudio musicStudio;
+    musicStudio.recordVocals("Alex");
+    musicStudio.mixAudioTracks(12);
+    musicStudio.exportMusicFile("PFMSong.wav");
 
     std::cout << "good to go!" << std::endl;
 }
