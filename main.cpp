@@ -544,6 +544,10 @@ int main()
     coffeeShop.currentCoffeeMachine.cleanMachine();
     coffeeShop.brewCoffee(coffeeShop.currentCoffeeMachine, 10);
 
+    VideoGameConsole ps5;
+    ps5.launchGame("FIFA 2026");
+    ps5.saveGameProgress("save_file_01");
+    std::cout << "Is console connected to internet? " << (ps5.connectToInternet("StudioWifi") == 1 ? "Yes" : "No") << "\n";
 
     
     std::cout << "good to go!" << std::endl;
