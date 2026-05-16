@@ -75,6 +75,8 @@ int main()
 
 struct CoffeeShop
 {
+    CoffeeShop();
+    
     int numOfCoffeeMachines = 4;
     int numOfEmployees = 8;
     float amountOfCoffeBeanInStorage = 25.f;
@@ -100,6 +102,11 @@ struct CoffeeShop
     
     CoffeeMachine currentCoffeeMachine;
 };
+
+CoffeeShop::CoffeeShop()
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl; //1)
+}
 
 void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
 {
