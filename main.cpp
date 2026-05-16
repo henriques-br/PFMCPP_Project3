@@ -337,6 +337,8 @@ int Computer::processAudioPlugins(int numOfPlugins)
 
 struct AudioInterface
 {
+    AudioInterface();
+    
     int numOfInputChannels = 26;
     int numOfOutputChannels = 20;
     double sampleRateInKhz = 48000;
@@ -347,6 +349,11 @@ struct AudioInterface
     void sendAudioToStudioMonitors(float outputVolume);
     bool connectMicrophone(std::string microphoneName);
 };
+
+AudioInterface::AudioInterface()
+{
+    std::cout << "AudioInterface being constructed!" << std::endl;
+}
 
 void AudioInterface::convertAnalogToDigitalAudio()
 {
