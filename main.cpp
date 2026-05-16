@@ -582,5 +582,10 @@ int main()
     midiKeyboard.controlVirtualInstrument("Pianoteq 9");
     midiKeyboard.adjustPluginParameter("Reverb Mix", 0.75f);
     
+    Microphone microphone;
+    microphone.captureVocalRecording("Lead Singer");
+    microphone.recordAcousticInstrument("Acoustic Guitar");
+    microphone.reduceBackgroundNoise();
+
     std::cout << "good to go!" << std::endl;
 }
