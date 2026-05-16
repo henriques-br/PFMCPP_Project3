@@ -577,5 +577,10 @@ int main()
     studioMonitors.reproduceLowFrequencies();
     studioMonitors.monitorRecordingSession(90);
 
+    MidiKeyboard midiKeyboard;
+    midiKeyboard.sendMidiNotes(64);
+    midiKeyboard.controlVirtualInstrument("Pianoteq 9");
+    midiKeyboard.adjustPluginParameter("Reverb Mix", 0.75f);
+    
     std::cout << "good to go!" << std::endl;
 }
