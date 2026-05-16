@@ -411,6 +411,8 @@ void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
 
 struct MidiKeyboard
 {
+    MidiKeyboard();
+    
     int numOfKeys = 88;
     int octaveRange = 7;
     bool isVelocitySensitivityEnabled = true;
@@ -421,6 +423,11 @@ struct MidiKeyboard
     void controlVirtualInstrument(std::string instrumentName);
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
+
+MidiKeyboard::MidiKeyboard()
+{
+    std::cout << "MidiKeyboard being constructed!" << std::endl;
+}
 
 void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
 {
