@@ -587,5 +587,10 @@ int main()
     microphone.recordAcousticInstrument("Acoustic Guitar");
     microphone.reduceBackgroundNoise();
 
+    MusicStudioComputerSetup setup;
+    setup.recordMusic("New Album");
+    setup.editAudioTrack("Lead Vocals");
+    setup.playVirtualInstrument("Synth Pad");
+
     std::cout << "good to go!" << std::endl;
 }
