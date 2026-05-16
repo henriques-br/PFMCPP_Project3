@@ -550,5 +550,13 @@ int main()
     std::cout << "Is console connected to internet? " << (ps5.connectToInternet("StudioWifi") == 1 ? "Yes" : "No") << "\n";
 
     
+    FitnessTracker fitnessTracker;
+    fitnessTracker.currentWorkoutSession.startWorkout();
+    fitnessTracker.trackWorkout(fitnessTracker.currentWorkoutSession);
+    fitnessTracker.displayNotification("Goal reached");
+    fitnessTracker.monitorSleep(8);
+    fitnessTracker.currentWorkoutSession.pauseWorkout();
+    fitnessTracker.currentWorkoutSession.endWorkout();
+
     std::cout << "good to go!" << std::endl;
 }
