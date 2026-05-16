@@ -561,6 +561,12 @@ int main()
     musicStudio.recordVocals("Alex");
     musicStudio.mixAudioTracks(12);
     musicStudio.exportMusicFile("PFMSong.wav");
+    
+    Computer studioComputer;
+    studioComputer.runAudioSoftware("Reaper");
+    studioComputer.saveProjectFile("AlbumSession");
+    studioComputer.processAudioPlugins(15);
 
+    
     std::cout << "good to go!" << std::endl;
 }
