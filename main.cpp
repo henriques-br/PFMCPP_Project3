@@ -300,6 +300,8 @@ std::string MusicStudio::exportMusicFile(std::string fileName)
 
 struct Computer
 {
+    Computer();
+    
     double cpuSpeedInGhz = 4;
     int amountRamInGb = 128;
     int storageSizeInGb = 8000;
@@ -310,6 +312,11 @@ struct Computer
     void saveProjectFile(std::string projectName);
     int processAudioPlugins(int numOfPlugins);
 };
+
+Computer::Computer()
+{
+    std::cout << "Computer being constructed!" << std::endl;
+}
 
 void Computer::runAudioSoftware(std::string softwareName)
 {
