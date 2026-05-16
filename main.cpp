@@ -571,6 +571,11 @@ int main()
     audioInterface.convertAnalogToDigitalAudio();
     audioInterface.sendAudioToStudioMonitors(75.0f);
     audioInterface.connectMicrophone("Shure SM7B");
+    
+    StudioMonitors studioMonitors;
+    studioMonitors.playAudioPlayback("MixSession.wav");
+    studioMonitors.reproduceLowFrequencies();
+    studioMonitors.monitorRecordingSession(90);
 
     std::cout << "good to go!" << std::endl;
 }
