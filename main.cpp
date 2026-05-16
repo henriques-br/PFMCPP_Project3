@@ -183,6 +183,8 @@ bool VideoGameConsole::connectToInternet(std::string wifiName)
 
 struct FitnessTracker
 {
+    FitnessTracker();
+    
     float batteryPercentage = 75.f;
     int numOfStepsRecorded = 127;
     int heartRateValue = 145;
@@ -191,6 +193,8 @@ struct FitnessTracker
     
     struct WorkoutSession
     {
+        WorkoutSession();
+        
         std::string workoutType = "Running";
         int workoutDurationInMinutes = 45;
         double caloriesBurned = 520.5;
@@ -209,6 +213,11 @@ struct FitnessTracker
     WorkoutSession currentWorkoutSession;
 };
 
+FitnessTracker::WorkoutSession::WorkoutSession()
+{
+ std::cout << "WorkoutSession being constructed!" << std::endl;
+}
+
 void FitnessTracker::WorkoutSession::startWorkout()
 {
     std::cout << "Starting " << workoutType << " workout\n";
@@ -224,6 +233,11 @@ bool FitnessTracker::WorkoutSession::endWorkout()
     std::cout << "Ending " << workoutType << " workout\n";
 
     return true;
+}
+
+FitnessTracker::FitnessTracker()
+{
+    std::cout << "FitnessTracker being constructed!" << std::endl;
 }
 
 void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
