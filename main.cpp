@@ -105,7 +105,7 @@ struct CoffeeShop
 
 CoffeeShop::CoffeeShop()
 {
-    std::cout << "CoffeeShop being constructed!" << std::endl; //1)
+    std::cout << "CoffeeShop being constructed!" << std::endl;
 }
 
 void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
@@ -146,6 +146,8 @@ void CoffeeShop::cleanTables(int numOfTables)
 
 struct VideoGameConsole
 {
+    VideoGameConsole();
+    
     int storageCapacityInGb = 500;
     int numOfInstalledGames = 15;
     float controllerBatteryLevel = 82;
@@ -156,6 +158,11 @@ struct VideoGameConsole
     void saveGameProgress(std::string saveFileName);
     bool connectToInternet(std::string wifiName);
 };
+
+VideoGameConsole::VideoGameConsole()
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl;
+}
 
 void VideoGameConsole::launchGame(std::string gameName)
 {
