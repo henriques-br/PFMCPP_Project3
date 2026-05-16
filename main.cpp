@@ -446,6 +446,8 @@ void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parame
 
 struct Microphone
 {
+    Microphone();
+    
     std::string microphoneType = "Condenser";
     float frequencyResponseRangeInHz = 80;
     double sensitivityLevel = 5;
@@ -456,6 +458,11 @@ struct Microphone
     void recordAcousticInstrument(std::string instrumentName);
     bool reduceBackgroundNoise();   
 };
+
+Microphone::Microphone()
+{
+    std::cout << "Microphone being constructed!" << std::endl;
+}
 
 void Microphone::captureVocalRecording(std::string vocalistName)
 {
