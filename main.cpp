@@ -144,6 +144,7 @@ struct Person
 
 void Person::run(int howFast, bool startWithLeftFoot)
 {
+    std::cout << "How fast  " << howFast << "\n";
     if (startWithLeftFoot == true)
     {
         leftFoot.stepForward();
@@ -156,6 +157,7 @@ void Person::run(int howFast, bool startWithLeftFoot)
     }
     distanceTraveled += leftFoot.stepSize() + rightFoot.stepSize();
 }
+
 
  /*
  2) provide implementations for the member functions you declared in your 10 user-defined types from the previous video outside of your UDT definitions.
@@ -223,8 +225,7 @@ bool CoffeeShop::CoffeeMachine::cleanMachine()
     return true;
 }
 
-void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine,
-                            int numOfCups)
+void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups)
 {
     activeCoffeeMachine.makeEspresso(numOfCups);
 
@@ -292,7 +293,7 @@ struct FitnessTracker
         bool endWorkout();
     };
     
-    void trackWorkout(WorkoutSession currentWorkoutSession);
+    void trackWorkout(WorkoutSession curWorkoutSession);
     void displayNotification(std::string notificationMessage);
     double monitorSleep(int hoursSlept);
     
@@ -316,11 +317,11 @@ bool FitnessTracker::WorkoutSession::endWorkout()
     return true;
 }
 
-void FitnessTracker::trackWorkout(WorkoutSession currentWorkoutSession)
+void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
 {
-    std::cout << "Tracking workout type: " << currentWorkoutSession.workoutType << "\n";
+    std::cout << "Tracking workout type: " << curWorkoutSession.workoutType << "\n";
 
-    std::cout << "Workout duration: " << currentWorkoutSession.workoutDurationInMinutes << " minutes\n";
+    std::cout << "Workout duration: " << curWorkoutSession.workoutDurationInMinutes << " minutes\n";
 }
 
 void FitnessTracker::displayNotification(std::string notificationMessage)
@@ -400,7 +401,7 @@ int Computer::processAudioPlugins(int numOfPlugins)
 struct AudioInterface
 {
     int numOfInputChannels = 26;
-    int numOfCoutputChannels = 20;
+    int numOfOutputChannels = 20;
     double sampleRateInKhz = 48000;
     bool isPhantonPowerEnabled = true;
     float headphoneOutputVolume = 45.5f;
