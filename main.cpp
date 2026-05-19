@@ -249,7 +249,10 @@ void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
 void FitnessTracker::displayNotification(std::string notificationMessage)
 {
     std::cout << "Notification: " << notificationMessage << "\n";
+    std::cout << "Number of steps recorded: " << numOfStepsRecorded << "\n";
+    std::cout << "Battery Level: " << batteryPercentage << "\n";
 }
+
 
 double FitnessTracker::monitorSleep(int hoursSlept)
 {
