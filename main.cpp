@@ -298,23 +298,28 @@ std::string MusicStudio::exportMusicFile(std::string fileName)
 
 struct Computer
 {
-    Computer();
-    
-    double cpuSpeedInGhz = 4;
-    int amountRamInGb = 128;
+    double cpuSpeedInGhz;
+    int amountRamInGb;
     int storageSizeInGb = 8000;
-    std::string operatingSystemName = "MacOS Tahoe";
+    std::string operatingSystemName;
     int numOfUsbPorts = 8;
-    
+
+    Computer();
+       
     void runAudioSoftware(std::string softwareName);
     void saveProjectFile(std::string projectName);
     int processAudioPlugins(int numOfPlugins);
 };
 
-Computer::Computer()
+Computer::Computer():
+    cpuSpeedInGhz(4),
+    amountRamInGb(128),
+    operatingSystemName("MacOS Tahoe")
+
 {
     std::cout << "Computer being constructed!" << std::endl;
 }
+
 
 void Computer::runAudioSoftware(std::string softwareName)
 {
