@@ -383,20 +383,23 @@ bool AudioInterface::connectMicrophone(std::string microphoneName)
 
 struct StudioMonitors
 {
-    StudioMonitors();
-    
-    double speakerSizeInInches = 10;
-    int powerOutputsInWatts = 1200;
-    float frequencyResponseRangeInHz = 250;
+    double speakerSizeInInches;
+    int powerOutputsInWatts;
+    float frequencyResponseRangeInHz;
     float volumeLevel = 45.f;
     double cabinetWidthInCm = 30;
-    
+
+    StudioMonitors();
+      
     void playAudioPlayback(std::string audioFileName);
     void reproduceLowFrequencies();
     void monitorRecordingSession(int sessionDurationInMinutes);
 };
 
-StudioMonitors::StudioMonitors()
+StudioMonitors::StudioMonitors():
+    speakerSizeInInches(10),
+    powerOutputsInWatts(1200),
+    frequencyResponseRangeInHz(250)
 {
     std::cout << "StudioMonitors being constructed!" << std::endl;
 }
