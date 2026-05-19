@@ -43,21 +43,23 @@ int main()
 
 struct CoffeeShop
 {
-    CoffeeShop();
-    
-    int numOfCoffeeMachines = 4;
-    int numOfEmployees = 8;
+    int numOfCoffeeMachines;
+    int numOfEmployees;
     float amountOfCoffeBeanInStorage = 25.f;
     double dailyProfitAmount =  1500;
     std::string shopName = "Prenda Cafe";
-    
+
+    CoffeeShop();
+
     struct CoffeeMachine
     {
-        std::string machineModelName = "Nespresso Aguila 440";
-        float waterTankCapacityInLiters = 2.5f;
+        std::string machineModelName;
+        float waterTankCapacityInLiters;
         int numOfEspressoShotsMadeToday = 120;
-        double machineTemperatureInCelsius = 93.5;
+        double machineTemperatureInCelsius;
         bool isSteamWandEnabled = true;
+
+        CoffeeMachine();
 
         void makeEspresso(int numOfShots);
         void steamMilk(float milkAmountInMl);
@@ -71,14 +73,21 @@ struct CoffeeShop
     CoffeeMachine currentCoffeeMachine;
 };
 
-CoffeeShop::CoffeeShop()
+CoffeeShop::CoffeeMachine::CoffeeMachine() :
+    machineModelName("Perfect Brew"),
+    waterTankCapacityInLiters(3.2f),
+    numOfEspressoShotsMadeToday(0),
+    machineTemperatureInCelsius(92.0),
+    isSteamWandEnabled(true)
 {
-    std::cout << "CoffeeShop being constructed!" << std::endl;
+    std::cout << "CoffeeMachine constructed!\n";
 }
 
 void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
 {
     numOfEspressoShotsMadeToday += numOfShots;
+    std::cout << "Machine Model: " << machineModelName << '\n';
+    std::cout << "Water Tank Capacity: " << waterTankCapacityInLiters << " liters\n\n";
 
     std::cout << "Making " << numOfShots << " " << (numOfShots == 1 ? "cup" : "cups") << " espresso shots\n";
 }
@@ -95,11 +104,19 @@ bool CoffeeShop::CoffeeMachine::cleanMachine()
     return true;
 }
 
+CoffeeShop::CoffeeShop(): numOfCoffeeMachines(6), numOfEmployees(9)
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl;
+}
+
 void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups)
 {
     activeCoffeeMachine.makeEspresso(numOfCups);
 
     std::cout << "Brewing " << numOfCups << " cups of coffee\n";
+    std::cout << "Shop Name: " << shopName << '\n';
+    std::cout << "Employees: " << numOfEmployees << '\n';
+    std::cout << "Coffee Machines: " << numOfCoffeeMachines << "\n\n";
 }
 
 void CoffeeShop::serveCustomers(int numOfCustomers)
