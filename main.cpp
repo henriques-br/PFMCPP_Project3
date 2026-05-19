@@ -75,6 +75,8 @@ int main()
 
 struct CoffeeShop
 {
+    CoffeeShop();
+    
     int numOfCoffeeMachines = 4;
     int numOfEmployees = 8;
     float amountOfCoffeBeanInStorage = 25.f;
@@ -100,6 +102,11 @@ struct CoffeeShop
     
     CoffeeMachine currentCoffeeMachine;
 };
+
+CoffeeShop::CoffeeShop()
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl;
+}
 
 void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
 {
@@ -139,6 +146,8 @@ void CoffeeShop::cleanTables(int numOfTables)
 
 struct VideoGameConsole
 {
+    VideoGameConsole();
+    
     int storageCapacityInGb = 500;
     int numOfInstalledGames = 15;
     float controllerBatteryLevel = 82;
@@ -149,6 +158,11 @@ struct VideoGameConsole
     void saveGameProgress(std::string saveFileName);
     bool connectToInternet(std::string wifiName);
 };
+
+VideoGameConsole::VideoGameConsole()
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl;
+}
 
 void VideoGameConsole::launchGame(std::string gameName)
 {
@@ -169,6 +183,8 @@ bool VideoGameConsole::connectToInternet(std::string wifiName)
 
 struct FitnessTracker
 {
+    FitnessTracker();
+    
     float batteryPercentage = 75.f;
     int numOfStepsRecorded = 127;
     int heartRateValue = 145;
@@ -177,6 +193,8 @@ struct FitnessTracker
     
     struct WorkoutSession
     {
+        WorkoutSession();
+        
         std::string workoutType = "Running";
         int workoutDurationInMinutes = 45;
         double caloriesBurned = 520.5;
@@ -195,6 +213,11 @@ struct FitnessTracker
     WorkoutSession currentWorkoutSession;
 };
 
+FitnessTracker::WorkoutSession::WorkoutSession()
+{
+ std::cout << "WorkoutSession being constructed!" << std::endl;
+}
+
 void FitnessTracker::WorkoutSession::startWorkout()
 {
     std::cout << "Starting " << workoutType << " workout\n";
@@ -210,6 +233,11 @@ bool FitnessTracker::WorkoutSession::endWorkout()
     std::cout << "Ending " << workoutType << " workout\n";
 
     return true;
+}
+
+FitnessTracker::FitnessTracker()
+{
+    std::cout << "FitnessTracker being constructed!" << std::endl;
 }
 
 void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
@@ -235,6 +263,8 @@ double FitnessTracker::monitorSleep(int hoursSlept)
 
 struct MusicStudio
 {
+    MusicStudio();
+    
     int numOfStudioMonitors = 8;
     int numOfMicrophones = 10;
     double roomSizeInSquareFeet = 50;
@@ -245,6 +275,11 @@ struct MusicStudio
     void mixAudioTracks(int numOfTracks);
     std::string exportMusicFile(std::string fileName);
 };
+
+MusicStudio::MusicStudio()
+{
+    std::cout << "MusicStudio being constructed!" << std::endl;
+}
 
 void MusicStudio::recordVocals(std::string singerName)
 {
@@ -265,6 +300,8 @@ std::string MusicStudio::exportMusicFile(std::string fileName)
 
 struct Computer
 {
+    Computer();
+    
     double cpuSpeedInGhz = 4;
     int amountRamInGb = 128;
     int storageSizeInGb = 8000;
@@ -275,6 +312,11 @@ struct Computer
     void saveProjectFile(std::string projectName);
     int processAudioPlugins(int numOfPlugins);
 };
+
+Computer::Computer()
+{
+    std::cout << "Computer being constructed!" << std::endl;
+}
 
 void Computer::runAudioSoftware(std::string softwareName)
 {
@@ -295,6 +337,8 @@ int Computer::processAudioPlugins(int numOfPlugins)
 
 struct AudioInterface
 {
+    AudioInterface();
+    
     int numOfInputChannels = 26;
     int numOfOutputChannels = 20;
     double sampleRateInKhz = 48000;
@@ -305,6 +349,11 @@ struct AudioInterface
     void sendAudioToStudioMonitors(float outputVolume);
     bool connectMicrophone(std::string microphoneName);
 };
+
+AudioInterface::AudioInterface()
+{
+    std::cout << "AudioInterface being constructed!" << std::endl;
+}
 
 void AudioInterface::convertAnalogToDigitalAudio()
 {
@@ -327,6 +376,8 @@ bool AudioInterface::connectMicrophone(std::string microphoneName)
 
 struct StudioMonitors
 {
+    StudioMonitors();
+    
     double speakerSizeInInches = 10;
     int powerOutputsInWatts = 1200;
     float frequencyResponseRangeInHz = 250;
@@ -337,6 +388,11 @@ struct StudioMonitors
     void reproduceLowFrequencies();
     void monitorRecordingSession(int sessionDurationInMinutes);
 };
+
+StudioMonitors::StudioMonitors()
+{
+    std::cout << "StudioMonitors being constructed!" << std::endl;
+}
 
 void StudioMonitors::playAudioPlayback(std::string audioFileName)
 {
@@ -355,6 +411,8 @@ void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
 
 struct MidiKeyboard
 {
+    MidiKeyboard();
+    
     int numOfKeys = 88;
     int octaveRange = 7;
     bool isVelocitySensitivityEnabled = true;
@@ -365,6 +423,11 @@ struct MidiKeyboard
     void controlVirtualInstrument(std::string instrumentName);
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
+
+MidiKeyboard::MidiKeyboard()
+{
+    std::cout << "MidiKeyboard being constructed!" << std::endl;
+}
 
 void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
 {
@@ -383,6 +446,8 @@ void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parame
 
 struct Microphone
 {
+    Microphone();
+    
     std::string microphoneType = "Condenser";
     float frequencyResponseRangeInHz = 80;
     double sensitivityLevel = 5;
@@ -393,6 +458,11 @@ struct Microphone
     void recordAcousticInstrument(std::string instrumentName);
     bool reduceBackgroundNoise();   
 };
+
+Microphone::Microphone()
+{
+    std::cout << "Microphone being constructed!" << std::endl;
+}
 
 void Microphone::captureVocalRecording(std::string vocalistName)
 {
@@ -413,6 +483,8 @@ bool Microphone::reduceBackgroundNoise()
 
 struct MusicStudioComputerSetup
 {
+    MusicStudioComputerSetup();
+    
     Computer computer;
     AudioInterface audioInterface;
     StudioMonitors studioMonitors;
@@ -423,6 +495,11 @@ struct MusicStudioComputerSetup
     void editAudioTrack(std::string trackName);
     void playVirtualInstrument(std::string instrumentName);
 };
+
+MusicStudioComputerSetup::MusicStudioComputerSetup()
+{
+    std::cout << "Microphone being constructed!" << std::endl;
+}
 
 void MusicStudioComputerSetup::recordMusic(std::string projectName)
 {
@@ -458,9 +535,71 @@ int main()
     Example::main();
 
     //add your code here:
-    
+    std::cout << "=========== 1st UDT ===========" << std::endl;
+    CoffeeShop coffeeShop;
+    coffeeShop.serveCustomers(12);
+    coffeeShop.cleanTables(5);
+    coffeeShop.currentCoffeeMachine.makeEspresso(3);
+    coffeeShop.currentCoffeeMachine.steamMilk(250.0f);
+    coffeeShop.currentCoffeeMachine.cleanMachine();
+    coffeeShop.brewCoffee(coffeeShop.currentCoffeeMachine, 10);
 
+    std::cout << "=========== 2nd UDT ===========" << std::endl;
+    VideoGameConsole ps5;
+    ps5.launchGame("FIFA 2026");
+    ps5.saveGameProgress("save_file_01");
+    std::cout << "Is console connected to internet? " << (ps5.connectToInternet("StudioWifi") == 1 ? "Yes" : "No") << "\n";
 
+    std::cout << "=========== 3rd UDT with nested ===========" << std::endl;
+    FitnessTracker fitnessTracker;
+    fitnessTracker.currentWorkoutSession.startWorkout();
+    fitnessTracker.trackWorkout(fitnessTracker.currentWorkoutSession);
+    fitnessTracker.displayNotification("Goal reached");
+    fitnessTracker.monitorSleep(8);
+    fitnessTracker.currentWorkoutSession.pauseWorkout();
+    fitnessTracker.currentWorkoutSession.endWorkout();
+
+    std::cout << "=========== 4th UDT ===========" << std::endl;
+    MusicStudio musicStudio;
+    musicStudio.recordVocals("Alex");
+    musicStudio.mixAudioTracks(12);
+    musicStudio.exportMusicFile("PFMSong.wav");
+
+    std::cout << "=========== 5th UDT ===========" << std::endl;
+    Computer studioComputer;
+    studioComputer.runAudioSoftware("Reaper");
+    studioComputer.saveProjectFile("AlbumSession");
+    studioComputer.processAudioPlugins(15);
     
+    std::cout << "=========== 6th UDT ===========" << std::endl;
+    AudioInterface audioInterface;
+    audioInterface.convertAnalogToDigitalAudio();
+    audioInterface.sendAudioToStudioMonitors(75.0f);
+    audioInterface.connectMicrophone("Shure SM7B");
+    
+    std::cout << "=========== 6th UDT ===========" << std::endl;
+    StudioMonitors studioMonitors;
+    studioMonitors.playAudioPlayback("MixSession.wav");
+    studioMonitors.reproduceLowFrequencies();
+    studioMonitors.monitorRecordingSession(90);
+
+    std::cout << "=========== 7th UDT ===========" << std::endl;
+    MidiKeyboard midiKeyboard;
+    midiKeyboard.sendMidiNotes(64);
+    midiKeyboard.controlVirtualInstrument("Pianoteq 9");
+    midiKeyboard.adjustPluginParameter("Reverb Mix", 0.75f);
+    
+    std::cout << "=========== 9th UDT ===========" << std::endl;
+    Microphone microphone;
+    microphone.captureVocalRecording("Lead Singer");
+    microphone.recordAcousticInstrument("Acoustic Guitar");
+    microphone.reduceBackgroundNoise();
+
+    std::cout << "=========== 10th UDT with nested ===========" << std::endl;
+    MusicStudioComputerSetup setup;
+    setup.recordMusic("New Album");
+    setup.editAudioTrack("Lead Vocals");
+    setup.playVirtualInstrument("Synth Pad");
+
     std::cout << "good to go!" << std::endl;
 }
