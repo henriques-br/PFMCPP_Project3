@@ -169,25 +169,26 @@ bool VideoGameConsole::connectToInternet(std::string wifiName)
     return true;
 }
 
+
 struct FitnessTracker
 {
-    FitnessTracker();
-    
-    float batteryPercentage = 75.f;
-    int numOfStepsRecorded = 127;
+    float batteryPercentage;
+    int numOfStepsRecorded;
     int heartRateValue = 145;
-    std::string deviceColor = "Blue";
+    std::string deviceColor;
     double dailyCalorieCount = 645;
-    
+
+    FitnessTracker();
+       
     struct WorkoutSession
     {
-        WorkoutSession();
-        
-        std::string workoutType = "Running";
-        int workoutDurationInMinutes = 45;
+        std::string workoutType;
+        int workoutDurationInMinutes;
         double caloriesBurned = 520.5;
         int averageHeartRate = 138;
-        bool isGpsTrackingEnabled = true;
+        bool isGpsTrackingEnabled;
+
+        WorkoutSession();
 
         void startWorkout();
         void pauseWorkout();
@@ -201,7 +202,10 @@ struct FitnessTracker
     WorkoutSession currentWorkoutSession;
 };
 
-FitnessTracker::WorkoutSession::WorkoutSession()
+FitnessTracker::WorkoutSession::WorkoutSession():
+    workoutType("Walking"),
+    workoutDurationInMinutes(55),
+    isGpsTrackingEnabled(false)
 {
  std::cout << "WorkoutSession being constructed!" << std::endl;
 }
@@ -223,10 +227,14 @@ bool FitnessTracker::WorkoutSession::endWorkout()
     return true;
 }
 
-FitnessTracker::FitnessTracker()
+FitnessTracker::FitnessTracker():
+    batteryPercentage(75.f),
+    numOfStepsRecorded(127),
+    deviceColor("Black")
 {
     std::cout << "FitnessTracker being constructed!" << std::endl;
 }
+
 
 void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
 {
