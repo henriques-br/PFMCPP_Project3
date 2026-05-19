@@ -259,20 +259,22 @@ double FitnessTracker::monitorSleep(int hoursSlept)
 
 struct MusicStudio
 {
-    MusicStudio();
-    
     int numOfStudioMonitors = 8;
     int numOfMicrophones = 10;
     double roomSizeInSquareFeet = 50;
-    std::string recordingSoftwareName = "Logic Pro";
-    float hourlyRentalPrice = 135.f;
+    std::string recordingSoftwareName;
+    float hourlyRentalPrice;
 
+    MusicStudio();
+    
     void recordVocals(std::string singerName);
     void mixAudioTracks(int numOfTracks);
     std::string exportMusicFile(std::string fileName);
 };
 
-MusicStudio::MusicStudio()
+MusicStudio::MusicStudio():
+    recordingSoftwareName("Reaper"),
+    hourlyRentalPrice(155.f)
 {
     std::cout << "MusicStudio being constructed!" << std::endl;
 }
