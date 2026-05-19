@@ -298,6 +298,7 @@ void MusicStudio::mixAudioTracks(int numOfTracks)
 std::string MusicStudio::exportMusicFile(std::string fileName)
 {
     std::cout << "Exporting music file " << fileName << "\n";
+    std::cout << "Recording Software Used " << recordingSoftwareName << "\n";
 
     return fileName;
 }
