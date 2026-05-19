@@ -129,7 +129,7 @@ struct VideoGameConsole
 
 VideoGameConsole::VideoGameConsole()
 {
-    std::cout << "CoffeeShop being constructed!" << std::endl;
+    std::cout << "VideoGameConsole being constructed!" << std::endl;
 }
 
 void VideoGameConsole::launchGame(std::string gameName)
@@ -310,7 +310,7 @@ struct AudioInterface
     int numOfInputChannels = 26;
     int numOfOutputChannels = 20;
     double sampleRateInKhz = 48000;
-    bool isPhantonPowerEnabled = true;
+    bool isPhantomPowerEnabled = true;
     float headphoneOutputVolume = 45.5f;
     
     void convertAnalogToDigitalAudio();
@@ -466,7 +466,7 @@ struct MusicStudioComputerSetup
 
 MusicStudioComputerSetup::MusicStudioComputerSetup()
 {
-    std::cout << "Microphone being constructed!" << std::endl;
+    std::cout << "MusicStudioComputerSetup being constructed!" << std::endl;
 }
 
 void MusicStudioComputerSetup::recordMusic(std::string projectName)
@@ -545,13 +545,13 @@ int main()
     audioInterface.sendAudioToStudioMonitors(75.0f);
     audioInterface.connectMicrophone("Shure SM7B");
     
-    std::cout << "=========== 6th UDT ===========" << std::endl;
+    std::cout << "=========== 7th UDT ===========" << std::endl;
     StudioMonitors studioMonitors;
     studioMonitors.playAudioPlayback("MixSession.wav");
     studioMonitors.reproduceLowFrequencies();
     studioMonitors.monitorRecordingSession(90);
 
-    std::cout << "=========== 7th UDT ===========" << std::endl;
+    std::cout << "=========== 8th UDT ===========" << std::endl;
     MidiKeyboard midiKeyboard;
     midiKeyboard.sendMidiNotes(64);
     midiKeyboard.controlVirtualInstrument("Pianoteq 9");
