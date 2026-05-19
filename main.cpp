@@ -426,6 +426,8 @@ void StudioMonitors::reproduceLowFrequencies()
 void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
 {
     std::cout << "Monitoring recording session for " << sessionDurationInMinutes << " minutes\n";
+    std::cout << "Power Outputs In Watts " << powerOutputsInWatts << "\n";
+    std::cout << "Frequency Response Range In Hz" << frequencyResponseRangeInHz << "\n";
 }
 
 struct MidiKeyboard
