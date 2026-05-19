@@ -327,10 +327,10 @@ Computer::Computer():
     std::cout << "Computer being constructed!" << std::endl;
 }
 
-
 void Computer::runAudioSoftware(std::string softwareName)
 {
     std::cout << "Running audio software " << softwareName << "\n";
+    std::cout << "Operating System Name " << operatingSystemName << "\n";
 }
 
 void Computer::saveProjectFile(std::string projectName)
