@@ -458,20 +458,23 @@ void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parame
 
 struct Microphone
 {
-    Microphone();
-    
-    std::string microphoneType = "Condenser";
+    std::string microphoneType;
     float frequencyResponseRangeInHz = 80;
-    double sensitivityLevel = 5;
-    double cableLenghtInMeters = 2;
+    double sensitivityLevel;
+    double cableLenghtInMeters;
     int maximumSoundPressureLevelInDb = 12;
-    
+
+    Microphone();
+       
     void captureVocalRecording(std::string vocalistName);
     void recordAcousticInstrument(std::string instrumentName);
-    bool reduceBackgroundNoise();   
+    bool reduceBackgroundNoise();
 };
 
-Microphone::Microphone()
+Microphone::Microphone():
+    microphoneType("Condenser"),
+    sensitivityLevel(7),
+    cableLenghtInMeters(5)
 {
     std::cout << "Microphone being constructed!" << std::endl;
 }
