@@ -495,6 +495,8 @@ Microphone::Microphone():
 void Microphone::captureVocalRecording(std::string vocalistName)
 {
     std::cout << "Capturing vocals for " << vocalistName << "\n";
+    std::cout << "Micropphone Type" << microphoneType << "\n";
+    std::cout << "Cable Lenght In Meters " << cableLenghtInMeters << "\n";
 }
 
 void Microphone::recordAcousticInstrument(std::string instrumentName)
