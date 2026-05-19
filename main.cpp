@@ -384,6 +384,8 @@ void AudioInterface::sendAudioToStudioMonitors(float outputVolume)
 bool AudioInterface::connectMicrophone(std::string microphoneName)
 {
     std::cout << "Connecting microphone " << microphoneName << "\n";
+    std::cout << "Number of Input Channels " << numOfInputChannels << "\n";
+    std::cout << "Number of Output Channels " << numOfOutputChannels << "\n";
 
     return true;
 }
