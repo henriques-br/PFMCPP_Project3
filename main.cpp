@@ -460,6 +460,8 @@ void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
 void MidiKeyboard::controlVirtualInstrument(std::string instrumentName)
 {
     std::cout << "Controlling virtual instrument " << instrumentName << "\n";
+    std::cout << "USB Connection Type " << usbConnectionType << "\n";
+    std::cout << "Velocity Sensitivity Enabled " << (isVelocitySensitivityEnabled == 1 ? "TRUE" : "FALSE") << "\n";
 }
 
 void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parameterValue)
