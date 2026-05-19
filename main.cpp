@@ -421,20 +421,22 @@ void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
 
 struct MidiKeyboard
 {
-    MidiKeyboard();
-    
     int numOfKeys = 88;
     int octaveRange = 7;
-    bool isVelocitySensitivityEnabled = true;
+    bool isVelocitySensitivityEnabled;
     int numOfControlKnobs = 12;
-    std::string usbConnectionType = "USB-C";
-    
+    std::string usbConnectionType;
+
+    MidiKeyboard();
+       
     void sendMidiNotes(int midiNoteNumber);
     void controlVirtualInstrument(std::string instrumentName);
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
 
-MidiKeyboard::MidiKeyboard()
+MidiKeyboard::MidiKeyboard():
+    isVelocitySensitivityEnabled(true),
+    usbConnectionType("USB-C")
 {
     std::cout << "MidiKeyboard being constructed!" << std::endl;
 }
