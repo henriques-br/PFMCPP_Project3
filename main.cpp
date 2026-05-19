@@ -155,6 +155,9 @@ VideoGameConsole::VideoGameConsole():
 void VideoGameConsole::launchGame(std::string gameName)
 {
     std::cout << "Launching " << gameName << "\n";
+    std::cout << "Storage Capacity in GB: " << storageCapacityInGb << '\n';
+    std::cout << "Installed Games: " << numOfInstalledGames << '\n';
+    std::cout << "Console Model Name: " << consoleModelName << "\n\n";
 }
 
 void VideoGameConsole::saveGameProgress(std::string saveFileName)
