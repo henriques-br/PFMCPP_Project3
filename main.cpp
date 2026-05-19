@@ -131,20 +131,23 @@ void CoffeeShop::cleanTables(int numOfTables)
 
 struct VideoGameConsole
 {
-    VideoGameConsole();
-    
-    int storageCapacityInGb = 500;
-    int numOfInstalledGames = 15;
+    int storageCapacityInGb;
+    int numOfInstalledGames;
     float controllerBatteryLevel = 82;
-    std::string consoleModelName = "PS5";
+    std::string consoleModelName;
     std::string screenResolutionSetting = "1759X1354";
-    
+
+    VideoGameConsole();
+
     void launchGame(std::string gameName);
     void saveGameProgress(std::string saveFileName);
     bool connectToInternet(std::string wifiName);
 };
 
-VideoGameConsole::VideoGameConsole()
+VideoGameConsole::VideoGameConsole():
+    storageCapacityInGb(1000),
+    numOfInstalledGames(6),
+    consoleModelName("Xbox One")
 {
     std::cout << "VideoGameConsole being constructed!" << std::endl;
 }
