@@ -43,21 +43,23 @@ int main()
 
 struct CoffeeShop
 {
-    CoffeeShop();
-    
-    int numOfCoffeeMachines = 4;
-    int numOfEmployees = 8;
+    int numOfCoffeeMachines;
+    int numOfEmployees;
     float amountOfCoffeBeanInStorage = 25.f;
     double dailyProfitAmount =  1500;
     std::string shopName = "Prenda Cafe";
-    
+
+    CoffeeShop();
+
     struct CoffeeMachine
     {
-        std::string machineModelName = "Nespresso Aguila 440";
-        float waterTankCapacityInLiters = 2.5f;
+        std::string machineModelName;
+        float waterTankCapacityInLiters;
         int numOfEspressoShotsMadeToday = 120;
-        double machineTemperatureInCelsius = 93.5;
+        double machineTemperatureInCelsius;
         bool isSteamWandEnabled = true;
+
+        CoffeeMachine();
 
         void makeEspresso(int numOfShots);
         void steamMilk(float milkAmountInMl);
@@ -71,14 +73,21 @@ struct CoffeeShop
     CoffeeMachine currentCoffeeMachine;
 };
 
-CoffeeShop::CoffeeShop()
+CoffeeShop::CoffeeMachine::CoffeeMachine() :
+    machineModelName("Perfect Brew"),
+    waterTankCapacityInLiters(3.2f),
+    numOfEspressoShotsMadeToday(0),
+    machineTemperatureInCelsius(92.0),
+    isSteamWandEnabled(true)
 {
-    std::cout << "CoffeeShop being constructed!" << std::endl;
+    std::cout << "CoffeeMachine constructed!\n";
 }
 
 void CoffeeShop::CoffeeMachine::makeEspresso(int numOfShots)
 {
     numOfEspressoShotsMadeToday += numOfShots;
+    std::cout << "Machine Model: " << machineModelName << '\n';
+    std::cout << "Water Tank Capacity: " << waterTankCapacityInLiters << " liters\n\n";
 
     std::cout << "Making " << numOfShots << " " << (numOfShots == 1 ? "cup" : "cups") << " espresso shots\n";
 }
@@ -95,11 +104,19 @@ bool CoffeeShop::CoffeeMachine::cleanMachine()
     return true;
 }
 
+CoffeeShop::CoffeeShop(): numOfCoffeeMachines(6), numOfEmployees(9)
+{
+    std::cout << "CoffeeShop being constructed!" << std::endl;
+}
+
 void CoffeeShop::brewCoffee(CoffeeMachine activeCoffeeMachine, int numOfCups)
 {
     activeCoffeeMachine.makeEspresso(numOfCups);
 
     std::cout << "Brewing " << numOfCups << " cups of coffee\n";
+    std::cout << "Shop Name: " << shopName << '\n';
+    std::cout << "Employees: " << numOfEmployees << '\n';
+    std::cout << "Coffee Machines: " << numOfCoffeeMachines << "\n\n";
 }
 
 void CoffeeShop::serveCustomers(int numOfCustomers)
@@ -114,27 +131,33 @@ void CoffeeShop::cleanTables(int numOfTables)
 
 struct VideoGameConsole
 {
-    VideoGameConsole();
-    
-    int storageCapacityInGb = 500;
-    int numOfInstalledGames = 15;
+    int storageCapacityInGb;
+    int numOfInstalledGames;
     float controllerBatteryLevel = 82;
-    std::string consoleModelName = "PS5";
+    std::string consoleModelName;
     std::string screenResolutionSetting = "1759X1354";
-    
+
+    VideoGameConsole();
+
     void launchGame(std::string gameName);
     void saveGameProgress(std::string saveFileName);
     bool connectToInternet(std::string wifiName);
 };
 
-VideoGameConsole::VideoGameConsole()
+VideoGameConsole::VideoGameConsole():
+    storageCapacityInGb(1000),
+    numOfInstalledGames(6),
+    consoleModelName("Xbox One")
 {
-    std::cout << "CoffeeShop being constructed!" << std::endl;
+    std::cout << "VideoGameConsole being constructed!" << std::endl;
 }
 
 void VideoGameConsole::launchGame(std::string gameName)
 {
     std::cout << "Launching " << gameName << "\n";
+    std::cout << "Storage Capacity in GB: " << storageCapacityInGb << '\n';
+    std::cout << "Installed Games: " << numOfInstalledGames << '\n';
+    std::cout << "Console Model Name: " << consoleModelName << "\n\n";
 }
 
 void VideoGameConsole::saveGameProgress(std::string saveFileName)
@@ -149,25 +172,26 @@ bool VideoGameConsole::connectToInternet(std::string wifiName)
     return true;
 }
 
+
 struct FitnessTracker
 {
-    FitnessTracker();
-    
-    float batteryPercentage = 75.f;
-    int numOfStepsRecorded = 127;
+    float batteryPercentage;
+    int numOfStepsRecorded;
     int heartRateValue = 145;
-    std::string deviceColor = "Blue";
+    std::string deviceColor;
     double dailyCalorieCount = 645;
-    
+
+    FitnessTracker();
+       
     struct WorkoutSession
     {
-        WorkoutSession();
-        
-        std::string workoutType = "Running";
-        int workoutDurationInMinutes = 45;
+        std::string workoutType;
+        int workoutDurationInMinutes;
         double caloriesBurned = 520.5;
         int averageHeartRate = 138;
-        bool isGpsTrackingEnabled = true;
+        bool isGpsTrackingEnabled;
+
+        WorkoutSession();
 
         void startWorkout();
         void pauseWorkout();
@@ -181,7 +205,10 @@ struct FitnessTracker
     WorkoutSession currentWorkoutSession;
 };
 
-FitnessTracker::WorkoutSession::WorkoutSession()
+FitnessTracker::WorkoutSession::WorkoutSession():
+    workoutType("Walking"),
+    workoutDurationInMinutes(55),
+    isGpsTrackingEnabled(false)
 {
  std::cout << "WorkoutSession being constructed!" << std::endl;
 }
@@ -203,10 +230,14 @@ bool FitnessTracker::WorkoutSession::endWorkout()
     return true;
 }
 
-FitnessTracker::FitnessTracker()
+FitnessTracker::FitnessTracker():
+    batteryPercentage(75.f),
+    numOfStepsRecorded(127),
+    deviceColor("Black")
 {
     std::cout << "FitnessTracker being constructed!" << std::endl;
 }
+
 
 void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
 {
@@ -218,7 +249,10 @@ void FitnessTracker::trackWorkout(WorkoutSession curWorkoutSession)
 void FitnessTracker::displayNotification(std::string notificationMessage)
 {
     std::cout << "Notification: " << notificationMessage << "\n";
+    std::cout << "Number of steps recorded: " << numOfStepsRecorded << "\n";
+    std::cout << "Battery Level: " << batteryPercentage << "\n";
 }
+
 
 double FitnessTracker::monitorSleep(int hoursSlept)
 {
@@ -231,20 +265,22 @@ double FitnessTracker::monitorSleep(int hoursSlept)
 
 struct MusicStudio
 {
-    MusicStudio();
-    
     int numOfStudioMonitors = 8;
     int numOfMicrophones = 10;
     double roomSizeInSquareFeet = 50;
-    std::string recordingSoftwareName = "Logic Pro";
-    float hourlyRentalPrice = 135.f;
+    std::string recordingSoftwareName;
+    float hourlyRentalPrice;
 
+    MusicStudio();
+    
     void recordVocals(std::string singerName);
     void mixAudioTracks(int numOfTracks);
     std::string exportMusicFile(std::string fileName);
 };
 
-MusicStudio::MusicStudio()
+MusicStudio::MusicStudio():
+    recordingSoftwareName("Reaper"),
+    hourlyRentalPrice(155.f)
 {
     std::cout << "MusicStudio being constructed!" << std::endl;
 }
@@ -262,26 +298,31 @@ void MusicStudio::mixAudioTracks(int numOfTracks)
 std::string MusicStudio::exportMusicFile(std::string fileName)
 {
     std::cout << "Exporting music file " << fileName << "\n";
+    std::cout << "Recording Software Used " << recordingSoftwareName << "\n";
 
     return fileName;
 }
 
 struct Computer
 {
-    Computer();
-    
-    double cpuSpeedInGhz = 4;
-    int amountRamInGb = 128;
+    double cpuSpeedInGhz;
+    int amountRamInGb;
     int storageSizeInGb = 8000;
-    std::string operatingSystemName = "MacOS Tahoe";
+    std::string operatingSystemName;
     int numOfUsbPorts = 8;
-    
+
+    Computer();
+       
     void runAudioSoftware(std::string softwareName);
     void saveProjectFile(std::string projectName);
     int processAudioPlugins(int numOfPlugins);
 };
 
-Computer::Computer()
+Computer::Computer():
+    cpuSpeedInGhz(4),
+    amountRamInGb(128),
+    operatingSystemName("MacOS Tahoe")
+
 {
     std::cout << "Computer being constructed!" << std::endl;
 }
@@ -289,6 +330,7 @@ Computer::Computer()
 void Computer::runAudioSoftware(std::string softwareName)
 {
     std::cout << "Running audio software " << softwareName << "\n";
+    std::cout << "Operating System Name " << operatingSystemName << "\n";
 }
 
 void Computer::saveProjectFile(std::string projectName)
@@ -305,23 +347,27 @@ int Computer::processAudioPlugins(int numOfPlugins)
 
 struct AudioInterface
 {
-    AudioInterface();
-    
-    int numOfInputChannels = 26;
-    int numOfOutputChannels = 20;
-    double sampleRateInKhz = 48000;
-    bool isPhantonPowerEnabled = true;
+    int numOfInputChannels;
+    int numOfOutputChannels;
+    double sampleRateInKhz;
+    bool isPhantomPowerEnabled = true;
     float headphoneOutputVolume = 45.5f;
-    
+
+    AudioInterface();
+       
     void convertAnalogToDigitalAudio();
     void sendAudioToStudioMonitors(float outputVolume);
     bool connectMicrophone(std::string microphoneName);
 };
 
-AudioInterface::AudioInterface()
+AudioInterface::AudioInterface():
+    numOfInputChannels(26),
+    numOfOutputChannels(20),
+    sampleRateInKhz(48000)
 {
     std::cout << "AudioInterface being constructed!" << std::endl;
 }
+
 
 void AudioInterface::convertAnalogToDigitalAudio()
 {
@@ -338,26 +384,31 @@ void AudioInterface::sendAudioToStudioMonitors(float outputVolume)
 bool AudioInterface::connectMicrophone(std::string microphoneName)
 {
     std::cout << "Connecting microphone " << microphoneName << "\n";
+    std::cout << "Number of Input Channels " << numOfInputChannels << "\n";
+    std::cout << "Number of Output Channels " << numOfOutputChannels << "\n";
 
     return true;
 }
 
 struct StudioMonitors
 {
-    StudioMonitors();
-    
-    double speakerSizeInInches = 10;
-    int powerOutputsInWatts = 1200;
-    float frequencyResponseRangeInHz = 250;
+    double speakerSizeInInches;
+    int powerOutputsInWatts;
+    float frequencyResponseRangeInHz;
     float volumeLevel = 45.f;
     double cabinetWidthInCm = 30;
-    
+
+    StudioMonitors();
+      
     void playAudioPlayback(std::string audioFileName);
     void reproduceLowFrequencies();
     void monitorRecordingSession(int sessionDurationInMinutes);
 };
 
-StudioMonitors::StudioMonitors()
+StudioMonitors::StudioMonitors():
+    speakerSizeInInches(10),
+    powerOutputsInWatts(1200),
+    frequencyResponseRangeInHz(250)
 {
     std::cout << "StudioMonitors being constructed!" << std::endl;
 }
@@ -375,24 +426,28 @@ void StudioMonitors::reproduceLowFrequencies()
 void StudioMonitors::monitorRecordingSession(int sessionDurationInMinutes)
 {
     std::cout << "Monitoring recording session for " << sessionDurationInMinutes << " minutes\n";
+    std::cout << "Power Outputs In Watts " << powerOutputsInWatts << "\n";
+    std::cout << "Frequency Response Range In Hz" << frequencyResponseRangeInHz << "\n";
 }
 
 struct MidiKeyboard
 {
-    MidiKeyboard();
-    
     int numOfKeys = 88;
     int octaveRange = 7;
-    bool isVelocitySensitivityEnabled = true;
+    bool isVelocitySensitivityEnabled;
     int numOfControlKnobs = 12;
-    std::string usbConnectionType = "USB-C";
-    
+    std::string usbConnectionType;
+
+    MidiKeyboard();
+       
     void sendMidiNotes(int midiNoteNumber);
     void controlVirtualInstrument(std::string instrumentName);
     void adjustPluginParameter(std::string parameterName, float parameterValue);
 };
 
-MidiKeyboard::MidiKeyboard()
+MidiKeyboard::MidiKeyboard():
+    isVelocitySensitivityEnabled(true),
+    usbConnectionType("USB-C")
 {
     std::cout << "MidiKeyboard being constructed!" << std::endl;
 }
@@ -405,6 +460,8 @@ void MidiKeyboard::sendMidiNotes(int midiNoteNumber)
 void MidiKeyboard::controlVirtualInstrument(std::string instrumentName)
 {
     std::cout << "Controlling virtual instrument " << instrumentName << "\n";
+    std::cout << "USB Connection Type " << usbConnectionType << "\n";
+    std::cout << "Velocity Sensitivity Enabled " << (isVelocitySensitivityEnabled == 1 ? "TRUE" : "FALSE") << "\n";
 }
 
 void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parameterValue)
@@ -414,20 +471,23 @@ void MidiKeyboard::adjustPluginParameter(std::string parameterName, float parame
 
 struct Microphone
 {
-    Microphone();
-    
-    std::string microphoneType = "Condenser";
+    std::string microphoneType;
     float frequencyResponseRangeInHz = 80;
-    double sensitivityLevel = 5;
-    double cableLenghtInMeters = 2;
+    double sensitivityLevel;
+    double cableLenghtInMeters;
     int maximumSoundPressureLevelInDb = 12;
-    
+
+    Microphone();
+       
     void captureVocalRecording(std::string vocalistName);
     void recordAcousticInstrument(std::string instrumentName);
-    bool reduceBackgroundNoise();   
+    bool reduceBackgroundNoise();
 };
 
-Microphone::Microphone()
+Microphone::Microphone():
+    microphoneType("Condenser"),
+    sensitivityLevel(7),
+    cableLenghtInMeters(5)
 {
     std::cout << "Microphone being constructed!" << std::endl;
 }
@@ -435,6 +495,8 @@ Microphone::Microphone()
 void Microphone::captureVocalRecording(std::string vocalistName)
 {
     std::cout << "Capturing vocals for " << vocalistName << "\n";
+    std::cout << "Micropphone Type" << microphoneType << "\n";
+    std::cout << "Cable Lenght In Meters " << cableLenghtInMeters << "\n";
 }
 
 void Microphone::recordAcousticInstrument(std::string instrumentName)
@@ -466,7 +528,7 @@ struct MusicStudioComputerSetup
 
 MusicStudioComputerSetup::MusicStudioComputerSetup()
 {
-    std::cout << "Microphone being constructed!" << std::endl;
+    std::cout << "MusicStudioComputerSetup being constructed!" << std::endl;
 }
 
 void MusicStudioComputerSetup::recordMusic(std::string projectName)
@@ -545,13 +607,13 @@ int main()
     audioInterface.sendAudioToStudioMonitors(75.0f);
     audioInterface.connectMicrophone("Shure SM7B");
     
-    std::cout << "=========== 6th UDT ===========" << std::endl;
+    std::cout << "=========== 7th UDT ===========" << std::endl;
     StudioMonitors studioMonitors;
     studioMonitors.playAudioPlayback("MixSession.wav");
     studioMonitors.reproduceLowFrequencies();
     studioMonitors.monitorRecordingSession(90);
 
-    std::cout << "=========== 7th UDT ===========" << std::endl;
+    std::cout << "=========== 8th UDT ===========" << std::endl;
     MidiKeyboard midiKeyboard;
     midiKeyboard.sendMidiNotes(64);
     midiKeyboard.controlVirtualInstrument("Pianoteq 9");
